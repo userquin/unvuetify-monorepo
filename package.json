@@ -1,0 +1,52 @@
+{
+  "name": "@unvuetify/monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.0",
+  "description": "A set of utilities for Vuetify components, directives, styles and more",
+  "author": "userquin <userquin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/userquin/unvuetify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userquin/unvuetify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/userquin/unvuetify/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "nr lint --fix",
+    "build": "pnpm -r --parallel run build",
+    "stub": "pnpm -r --parallel run stub",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp -r --excute=\"pnpm i\""
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@antfu/ni": "catalog:",
+    "@nuxt/module-builder": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "pathe": "catalog:",
+    "taze": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "unimport": "catalog:",
+    "unplugin-auto-import": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "upath": "catalog:",
+    "vue-tsc": "catalog:",
+    "vuetify": "catalog:"
+  },
+  "resolutions": {
+    "nuxt": "catalog:",
+    "vite": "catalog:",
+    "vuetify": "catalog:"
+  }
+}

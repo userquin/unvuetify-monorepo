@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleDetection": "force",
+    "module": "preserve",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@unvuetify/unimport-presets": [
+        "./packages/unimport-presets/src/"
+      ],
+      "@unvuetify/unplugin-vue-components-resolvers": [
+        "./packages/unplugin-vue-components-resolvers/src/"
+      ],
+      "@unvuetify/vite-styles-plugin": [
+        "./packages/styles/src/"
+      ]
+    },
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": false,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@unvuetify/vite-styles-plugin",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.8.0",
+  "description": "Vuetify Vite plugin for styles",
+  "author": "userquin <userquin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/userquin/unvuetify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userquin/unvuetify.git",
+    "directory": "packages/styles-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/userquin/unvuetify/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0",
+    "vuetify": "^3.0.0"
+  },
+  "dependencies": {
+    "@unvuetify/shared": "workspace:*",
+    "pathe": "catalog:",
+    "upath": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@unvuetify/unplugin-vue-components-resolvers",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.8.0",
+  "description": "Vuetify unplugin-vue-components resolvers for components and directives",
+  "author": "userquin <userquin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/userquin/unvuetify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userquin/unvuetify.git",
+    "directory": "packages/unplugin-vue-components-resolvers"
+  },
+  "bugs": {
+    "url": "https://github.com/userquin/unvuetify/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "peerDependencies": {
+    "unplugin-vue-components": "catalog:"
+  },
+  "dependencies": {
+    "@unvuetify/shared": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
