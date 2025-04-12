@@ -53,7 +53,7 @@ catalogs:
       version: 2.2.8
 
 overrides:
-  nuxt: 3.12.2
+  nuxt: 3.16.2
   vite: 6.2.2
   vuetify: ^3.8.1
 

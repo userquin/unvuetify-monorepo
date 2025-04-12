@@ -9,7 +9,7 @@ catalog:
   '@types/node': ^22.14.1
   bumpp: ^10.1.0
   eslint: ^9.24.0
-  nuxt: 3.12.2
+  nuxt: 3.16.2
   pathe: ^2.0.3
   taze: ^19.0.2
   typescript: ^5.8.3
