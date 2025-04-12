@@ -15,9 +15,6 @@
   "bugs": {
     "url": "https://github.com/userquin/unvuetify/issues"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",

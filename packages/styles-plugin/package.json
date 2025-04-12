@@ -37,8 +37,5 @@
     "@unvuetify/shared": "workspace:*",
     "pathe": "catalog:",
     "upath": "catalog:"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

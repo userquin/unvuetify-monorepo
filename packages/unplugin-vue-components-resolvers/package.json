@@ -34,8 +34,5 @@
   },
   "dependencies": {
     "@unvuetify/shared": "workspace:*"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
