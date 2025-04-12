@@ -1,9 +1,9 @@
 <br>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/userquin/unvuetify-monorepo/main/vuetify-logo-drak-atom.svg" height="100px" />
-    <img height="100px" src="https://raw.githubusercontent.com/unvuetify-monorepo/userquin/main/vuetify-logo-light-atom.svg">
+  <picture title="Vuetify logo">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com.com/userquin/unvuetify-monorepo/main/raw/vuetify-logo-dark-atom.svg" height="100px" />
+    <img height="100px" src="https://github.com/unvuetify-monorepo/userquin/main/raw/vuetify-logo-light-atom.svg">
   </picture>
 </p>
 
