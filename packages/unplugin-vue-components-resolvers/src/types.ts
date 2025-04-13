@@ -47,3 +47,24 @@ export interface VuetifyDirectivesResolverOptions {
    */
   paths?: string[]
 }
+
+export interface VuetifyVueResolverOptions extends Omit<VuetifyComponentResolverOptions, 'exclude'> {
+  /**
+   * Prefix Vuetify components (to allow use other components with the same name):
+   * - when prefix set to `true` will use `Vuetify` => `vuetify-<component>/Vuetify<component>: `vuetify-btn/VuetifyBtn`.
+   */
+  prefixComponents?: true
+  /**
+   * Prefix Vuetify directives (to allow use other directives with the same name):
+   * - when prefix set to `true` will use `Vuetify` => `v-vuetify-<directive>: `v-vuetify-ripple`.
+   */
+  prefixDirectives?: true
+  /**
+   * Directives to exclude.
+   */
+  excludeDirectives?: DirectiveName[]
+  /**
+   * Components to exclude.
+   */
+  excludeComponents?: (ComponentName | LabComponentName)[]
+}

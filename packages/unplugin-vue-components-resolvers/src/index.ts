@@ -1,14 +1,13 @@
 import type {
-  ComponentName,
   DirectiveName,
   ImportComponents,
   ImportMaps,
-  LabComponentName,
 } from '@unvuetify/shared'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 import type {
   VuetifyComponentResolverOptions,
   VuetifyDirectivesResolverOptions,
+  VuetifyVueResolverOptions,
 } from './types'
 import {
   prepareTransformAssetUrls,
@@ -20,27 +19,6 @@ import {
 export type * from './types'
 
 export { prepareTransformAssetUrls }
-
-export interface VuetifyVueResolverOptions extends Omit<VuetifyComponentResolverOptions, 'exclude'> {
-  /**
-   * Prefix Vuetify components (to allow use other components with the same name):
-   * - when prefix set to `true` will use `Vuetify` => `vuetify-<component>/Vuetify<component>: `vuetify-btn/VuetifyBtn`.
-   */
-  prefixComponents?: true
-  /**
-   * Prefix Vuetify directives (to allow use other directives with the same name):
-   * - when prefix set to `true` will use `Vuetify` => `v-vuetify-<directive>: `v-vuetify-ripple`.
-   */
-  prefixDirectives?: true
-  /**
-   * Directives to exclude.
-   */
-  excludeDirectives?: DirectiveName[]
-  /**
-   * Components to exclude.
-   */
-  excludeComponents?: (ComponentName | LabComponentName)[]
-}
 
 export function VuetifyVueResolver(options: VuetifyVueResolverOptions = {}) {
   const {
