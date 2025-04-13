@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const theme = useTheme()
+const theme = useVTheme()
 
 const clicks = ref(0)
 function onClick() {
@@ -11,10 +11,10 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
 </script>
 
 <template>
-  <v-container class="fill-height" max-width="900">
-    <v-row justify="center">
-      <v-col>
-        <v-img
+  <vuetify-container class="fill-height" max-width="900">
+    <vuetify-row justify="center">
+      <vuetify-col>
+        <vuetify-img
           class="mb-4"
           height="150"
           src="~/assets/logo.png"
@@ -28,9 +28,9 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
             Vuetify
           </h1>
         </div>
-        <v-row>
-          <v-col cols="12">
-            <v-card
+        <vuetify-row>
+          <vuetify-col cols="12">
+            <vuetify-card
               class="py-4 px-2"
               color="surface-variant"
               image="https://cdn.vuetifyjs.com/docs/images/one/create/feature.png"
@@ -43,11 +43,11 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
                   Vuetify Auto-Import with Resolvers
                 </h2>
               </template>
-            </v-card>
-          </v-col>
-          <v-col cols="12">
-            <v-card
-              v-click-outside="{ handler: onClick }"
+            </vuetify-card>
+          </vuetify-col>
+          <vuetify-col cols="12">
+            <vuetify-card
+              v-vuetify-click-outside="{ handler: onClick }"
               class="py-4 px-2"
               color="surface-variant"
               rounded="lg"
@@ -55,12 +55,12 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
             >
               <template #actions>
                 Click outside the card: {{ clicks }}
-                <v-btn>Click me</v-btn>
+                <vuetify-btn>Click me</vuetify-btn>
               </template>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+            </vuetify-card>
+          </vuetify-col>
+        </vuetify-row>
+      </vuetify-col>
+    </vuetify-row>
+  </vuetify-container>
 </template>
