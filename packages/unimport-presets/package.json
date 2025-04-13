@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "stub": "unbuild --stub"
+    "stub": "unbuild --stub",
+    "tgz": "pnpm pack"
   },
   "peerDependencies": {
     "unimport": "^4.0.0 || ^5.0.0"

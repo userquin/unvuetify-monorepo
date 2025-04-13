@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "stub": "unbuild --stub"
+    "stub": "unbuild --stub",
+    "tgz": "pnpm pack"
   },
   "peerDependencies": {
     "unplugin-vue-components": "catalog:"

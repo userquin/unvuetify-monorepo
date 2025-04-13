@@ -21,6 +21,7 @@
     "build": "pnpm -r --parallel run build",
     "stub": "pnpm -r --parallel run stub",
     "typecheck": "tsc --noEmit",
+    "tgz": "pnpm -r --parallel run tgz",
     "release": "bumpp -r --excute=\"pnpm i\""
   },
   "devDependencies": {
