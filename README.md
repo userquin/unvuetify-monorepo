@@ -47,7 +47,7 @@ sass/scss variables | ✅                   | ✅                      | ✅    
 sass/scss variables with Vite/Nuxt 3 SSR | ✅[^5]               | ❓[^6]                  | ✅                     | ❌             | ❌           | ✅
 prefix composables, directives and components | ❌                   | ❌                      | ❌                     | ✅             | ✅           | ✅
 Nuxt Lazy Hydration | ❌                   | ❌                      | ❌                     | ❌             | ✅[^7]       | ✅
-VSCode directives suggestions | ❌                   | ❌                      | ❌                     | ✅             | ✅           | ✅
+VSCode directives suggestions | ❌                   | ❌                      | ❌                     | ❌             | ✅           | ✅
 
 [^1]: `@unvuetify/vite-plugin-styles`
 [^2]: `@unvuetify/unplugin-vue-components-resolvers`
