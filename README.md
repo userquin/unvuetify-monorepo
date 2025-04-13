@@ -50,7 +50,7 @@ Nuxt Lazy Hydration | ❌                   | ❌                      | ❌    
 VSCode directives suggestions | ❌                   | ❌                      | ❌                      | ✅             | ✅           | ✅                       
 
 [^1]: `@unvuetify/vite-plugin-styles`
-[^2]: `@unvuetify/unplugin-vue-components/resolvers`
+[^2]: `@unvuetify/unplugin-vue-components-resolvers`
 [^3]: `@unvuetify/unimport-presets`
 [^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo
 [^5]: will work, but we can get some warning about missing sources
