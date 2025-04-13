@@ -1,4 +1,5 @@
 import { VuetifyVueResolver } from '@unvuetify/unplugin-vue-components-resolvers'
+import { VuetifyStylesVitePlugin } from '@unvuetify/vite-styles-plugin'
 import Vue from '@vitejs/plugin-vue'
 import ViteFonts from 'unplugin-fonts/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -31,9 +32,14 @@ export default defineConfig({
     ViteFonts({
       google: {
         families: [{
-          name: 'Roboto',
+          name: 'Poetsen One',
           styles: 'wght@100;300;400;500;700;900',
         }],
+      },
+    }),
+    VuetifyStylesVitePlugin({
+      mode: {
+        configFile: 'src/styles/settings.scss',
       },
     }),
     Inspect(),
