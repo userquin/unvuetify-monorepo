@@ -28,7 +28,7 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "tgz": "pnpm pack"
+    "local:tgz": "pnpm pack"
   },
   "peerDependencies": {
     "vuetify": "^3.0.0"
