@@ -1,0 +1,33 @@
+{
+  "name": "prefix-resolvers",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "catalog:",
+    "roboto-fontface": "*",
+    "vue": "catalog:",
+    "vuetify": "catalog:"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "catalog:",
+    "@unvuetify/shared": "workspace:*",
+    "@unvuetify/unplugin-vue-components-resolvers": "workspace:*",
+    "@unvuetify/vite-styles-plugin": "workspace:*",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/tsconfig": "catalog:",
+    "sass-embedded": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-fonts": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-inspect": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
