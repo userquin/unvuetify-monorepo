@@ -10,6 +10,7 @@ import type {
   VuetifyDirectivesOptions,
 } from './types'
 import {
+  createTransformAssetUrls,
   mapComponent,
   resolveVuetifyComponentFrom,
   resolveVuetifyImportMaps,
@@ -17,6 +18,8 @@ import {
 } from '@unvuetify/shared'
 
 export type * from './types'
+
+export { createTransformAssetUrls }
 
 export function VuetifyComposables(options: VuetifyComposablesOptions = {}) {
   const { prefix } = options

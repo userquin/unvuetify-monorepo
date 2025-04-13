@@ -39,7 +39,14 @@ export function mapComponent(prefix: boolean, name: string) {
   return prefix ? name.replace(/^V/, 'Vuetify') : name
 }
 
-export function prepareTransformAssetUrls(prefix: boolean) {
+/**
+ * Creates Vuetify transform asset urls for Vue.
+ *
+ * **WARNING**: if you're prefixing Vuetify components you need to enable prefix.
+ *
+ * @param prefix {boolean} - Whether to prefix the component names with "Vuetify" (default false).
+ */
+export function createTransformAssetUrls(prefix = false) {
   const transformAssetUrls = {
     VAppBar: ['image'],
     VAvatar: ['image'],

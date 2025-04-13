@@ -10,7 +10,7 @@ import type {
   VuetifyVueResolverOptions,
 } from './types'
 import {
-  prepareTransformAssetUrls,
+  createTransformAssetUrls,
   resolveVuetifyComponentFrom,
   resolveVuetifyImportMap,
   resolveVuetifyImportMaps,
@@ -18,7 +18,7 @@ import {
 
 export type * from './types'
 
-export { prepareTransformAssetUrls }
+export { createTransformAssetUrls }
 
 export function VuetifyVueResolver(options: VuetifyVueResolverOptions = {}) {
   const {
@@ -42,7 +42,7 @@ export function VuetifyVueResolver(options: VuetifyVueResolverOptions = {}) {
   )
 
   return {
-    transformAssetUrls: prepareTransformAssetUrls(prefixComponents === true),
+    transformAssetUrls: createTransformAssetUrls(prefixComponents === true),
     VuetifyDirectiveResolver: directives,
     VuetifyComponentResolver: components,
   }
@@ -50,12 +50,6 @@ export function VuetifyVueResolver(options: VuetifyVueResolverOptions = {}) {
 
 /**
  * Vuetify directives resolver for `unplugin-vue-components`.
- *
- * **WARNING**: current version of `unplugin-vue-components` does not configure correctly the directives
- * and won't work with `Vuetify` directives, use `unplugin-auto-import` with Vuetify directives
- * preset from `unimport-presets` subpackage export.
- *
- * @see https://github.com/unplugin/unplugin-vue-components/pull/828
  */
 export function VuetifyDirectiveResolver(options: VuetifyDirectivesResolverOptions = {}) {
   return createDirectivesResolver(resolveVuetifyImportMap(options.paths), options)
