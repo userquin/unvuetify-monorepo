@@ -30,8 +30,7 @@ function onClick() {
             <vuetify-row>
               <vuetify-col cols="12">
                 <vuetify-card
-                  v-vuetify-click-outside="{ handler: onClick }"
-                  class="py-4"
+                  class="py-4 px-2"
                   color="surface-variant"
                   image="https://cdn.vuetifyjs.com/docs/images/one/create/feature.png"
                   prepend-icon="mdi-rocket-launch-outline"
@@ -43,6 +42,16 @@ function onClick() {
                       Vuetify Auto-Import with Resolvers
                     </h2>
                   </template>
+                </vuetify-card>
+              </vuetify-col>
+              <vuetify-col cols="12">
+                <vuetify-card
+                  v-vuetify-click-outside="{ handler: onClick }"
+                  class="py-4 px-2"
+                  color="surface-variant"
+                  rounded="lg"
+                  variant="tonal"
+                >
                   <template #actions>
                     Click outside the card: {{ clicks }}
                     <vuetify-btn>Click me</vuetify-btn>
