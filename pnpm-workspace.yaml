@@ -17,7 +17,7 @@ catalog:
   pathe: ^2.0.3
   sass-embedded: ^1.86.3
   taze: ^19.0.2
-  typescript: ^5.8.3
+  typescript: ~5.8.3
   unbuild: ^3.5.0
   unimport: ^5.0.0
   unplugin-auto-import: ^19.1.2

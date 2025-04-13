@@ -46,7 +46,7 @@ catalogs:
       specifier: ^19.0.2
       version: 19.0.4
     typescript:
-      specifier: ^5.8.3
+      specifier: ~5.8.3
       version: 5.8.3
     unbuild:
       specifier: ^3.5.0
@@ -197,6 +197,9 @@ importers:
       '@tsconfig/node22':
         specifier: 'catalog:'
         version: 22.0.1
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.14.1
       '@unvuetify/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -215,6 +218,9 @@ importers:
       sass-embedded:
         specifier: 'catalog:'
         version: 1.86.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.3
       unplugin-fonts:
         specifier: 'catalog:'
         version: 1.3.1(vite@6.2.2(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.3)(yaml@2.7.1))

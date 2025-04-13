@@ -18,7 +18,7 @@ export default defineConfig({
       template: { transformAssetUrls },
     }),
     Components({
-      dts: 'src/components.d.ts',
+      dts: true,
       directives: true,
       resolvers: [
         VuetifyDirectiveResolver,
