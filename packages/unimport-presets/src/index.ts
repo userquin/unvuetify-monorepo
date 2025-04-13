@@ -76,7 +76,7 @@ export function VuetifyDirectives(options: VuetifyDirectivesOptions = {}) {
   } satisfies InlinePreset
 }
 
-export function buildAddonsOptions(addons?: AddonsOptions | Addon[]): AddonsOptions {
+export function enableDirectives(addons?: AddonsOptions | Addon[]): AddonsOptions {
   if (!addons) {
     return { vueDirectives: true }
   }
