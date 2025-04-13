@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const theme = useTheme()
+const theme = useVTheme()
 
 const clicks = ref(0)
 function onClick() {
@@ -11,11 +11,11 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
 </script>
 
 <template>
-  <v-app>
-    <v-main>
-      <v-container class="fill-height">
+  <vuetify-app>
+    <vuetify-main>
+      <vuetify-container class="fill-height">
         <div>
-          <v-img
+          <vuetify-img
             class="mb-4"
             height="150"
             src="./assets/logo.png"
@@ -29,9 +29,9 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
               Vuetify
             </h1>
           </div>
-          <v-row>
-            <v-col cols="12">
-              <v-card
+          <vuetify-row>
+            <vuetify-col cols="12">
+              <vuetify-card
                 v-click-outside="{ handler: onClick }"
                 class="py-4"
                 color="surface-variant"
@@ -47,13 +47,13 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
                 </template>
                 <template #actions>
                   Click outside the card: {{ clicks }}
-                  <v-btn>Click me</v-btn>
+                  <vuetify-btn>Click me</vuetify-btn>
                 </template>
-              </v-card>
-            </v-col>
-          </v-row>
+              </vuetify-card>
+            </vuetify-col>
+          </vuetify-row>
         </div>
-      </v-container>
-    </v-main>
-  </v-app>
+      </vuetify-container>
+    </vuetify-main>
+  </vuetify-app>
 </template>
