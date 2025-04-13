@@ -3,7 +3,11 @@ const theme = useVTheme()
 
 const clicks = ref(0)
 function onClick() {
-  clicks.value++
+  clicks.value = clicks.value + 1
+}
+function onHydrated() {
+  // eslint-disable-next-line no-console
+  console.log('Hydrated')
 }
 
 // eslint-disable-next-line no-console
@@ -55,7 +59,12 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
             >
               <template #actions>
                 Click outside the card: {{ clicks }}
-                <vuetify-btn>Click me</vuetify-btn>
+                <vuetify-btn @click="onClick">
+                  Click me
+                </vuetify-btn>
+                <lazy-vuetify-btn :hydrate-after="2000" @hydrated="onHydrated" @click="onClick">
+                  Click me
+                </lazy-vuetify-btn>
               </template>
             </vuetify-card>
           </vuetify-col>

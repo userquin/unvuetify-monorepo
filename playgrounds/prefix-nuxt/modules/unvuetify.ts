@@ -75,7 +75,9 @@ export default defineNuxtModule<VuetifyModuleOptions>({
     })
 
     nuxt.hook('vite:extendConfig', (viteInlineConfig) => {
-      viteInlineConfig.optimizeDeps = defu(viteInlineConfig.optimizeDeps, { exclude: ['vuetify'] })
+      viteInlineConfig.optimizeDeps = defu(viteInlineConfig.optimizeDeps, {
+        exclude: ['vuetify'],
+      })
 
       if (nuxt.options.ssr) {
         viteInlineConfig.ssr ||= {}

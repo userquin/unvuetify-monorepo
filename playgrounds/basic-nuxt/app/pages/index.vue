@@ -3,7 +3,11 @@ const theme = useTheme()
 
 const clicks = ref(0)
 function onClick() {
-  clicks.value++
+  clicks.value = clicks.value + 1
+}
+function onHydrated() {
+  // eslint-disable-next-line no-console
+  console.log('Hydrated')
 }
 
 // eslint-disable-next-line no-console
@@ -55,7 +59,12 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
             >
               <template #actions>
                 Click outside the card: {{ clicks }}
-                <v-btn>Click me</v-btn>
+                <v-btn @click="onClick">
+                  Click me
+                </v-btn>
+                <lazy-v-btn :hydrate-after="2000" @hydrated="onHydrated" @click="onClick">
+                  Click me
+                </lazy-v-btn>
               </template>
             </v-card>
           </v-col>

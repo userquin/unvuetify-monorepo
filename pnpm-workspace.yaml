@@ -2,6 +2,8 @@ packages:
   - packages/**
   - playgrounds/**
 
+patchedDependencies:
+  nuxt@3.16.2: patches/nuxt@3.16.2.patch
 catalog:
   '@antfu/eslint-config': ^4.12.0
   '@antfu/ni': ^24.3.0
