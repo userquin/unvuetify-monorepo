@@ -6,6 +6,9 @@
     "module": "preserve",
     "moduleResolution": "Bundler",
     "paths": {
+      "@unvuetify/shared": [
+        "./packages/shared/src/"
+      ],
       "@unvuetify/unimport-presets": [
         "./packages/unimport-presets/src/"
       ],
