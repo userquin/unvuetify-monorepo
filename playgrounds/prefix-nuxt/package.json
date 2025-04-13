@@ -1,0 +1,30 @@
+{
+  "name": "prefix-nuxt",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "@mdi/font": "catalog:",
+    "nuxt": "catalog:",
+    "vue": "catalog:",
+    "vuetify": "catalog:"
+  },
+  "devDependencies": {
+    "@nuxt/fonts": "catalog:",
+    "@unvuetify/shared": "workspace:*",
+    "@unvuetify/unimport-presets": "workspace:*",
+    "@unvuetify/vite-styles-plugin": "workspace:*",
+    "sass-embedded": "catalog:",
+    "typescript": "catalog:",
+    "unimport": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
