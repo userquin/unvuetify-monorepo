@@ -5,10 +5,9 @@ function r(p: string) {
   return resolve(fileURLToPath(new URL('.', import.meta.url)), p)
 }
 
-type Key = 'presets' | 'resolvers' | 'shared' | 'vite' | 'nuxt'
+type Key = 'presets' | 'resolvers' | 'shared' | 'styles' | 'nuxt'
 
 export const alias: Record<Key, Record<string, string>> = {
-  vite: {},
   nuxt: {},
   presets: {
     '@unvuetify/unimport-presets': r('./packages/unimport-presets/src/'),
@@ -17,6 +16,9 @@ export const alias: Record<Key, Record<string, string>> = {
     '@unvuetify/unplugin-vue-components-resolvers': r('./packages/unplugin-vue-components-resolvers/src/'),
   },
   shared: {
-    '@unvuetify/vite-styles-plugin': r('./packages/styles/src/'),
+    '@unvuetify/shared': r('./packages/shared/src/'),
+  },
+  styles: {
+    '@unvuetify/vite-styles-plugin': r('./packages/styles-plugin/src/'),
   },
 }
