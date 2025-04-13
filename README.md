@@ -53,7 +53,7 @@ VSCode directives suggestions | ❌                   | ❌                     
 [^2]: `@unvuetify/unplugin-vue-components-resolvers`
 [^3]: `@unvuetify/unimport-presets`
 [^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo
-[^5]: will work, but we can get some warning about missing sources
+[^5]: `vite-plugin-vuetify` will work, but we can get some warnings about missing sources
 [^6]: `@unvuetify/unimport-presets` components preset can be used with Nuxt imports
 
 ## 📄 License
