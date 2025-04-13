@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.8.0",
-  "description": "A set of utilities for Vuetify components, directives, styles and more",
+  "description": "Unified Vuetify utilities",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/userquin/unvuetify#readme",
