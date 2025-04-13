@@ -13,7 +13,6 @@
 Vuetify unimport presets for composables and directives.
 </p>
 
-
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
