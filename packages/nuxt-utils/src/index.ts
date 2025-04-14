@@ -9,7 +9,6 @@ import type {
 } from '@unvuetify/vite-styles-plugin'
 import type { AssetURLOptions, AssetURLTagConfig } from '@vue/compiler-sfc'
 import type { Addon, AddonsOptions } from 'unimport'
-import { } from '@unvuetify/shared'
 import {
   createTransformAssetUrls,
   enableDirectives,
