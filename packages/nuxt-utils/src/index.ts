@@ -4,9 +4,7 @@ import type {
   VuetifyComposablesOptions,
   VuetifyDirectivesOptions,
 } from '@unvuetify/unimport-presets'
-import type {
-  VuetifyStylesOptions,
-} from '@unvuetify/vite-styles-plugin'
+import type { VuetifyStylesOptions } from '@unvuetify/vite-styles-plugin'
 import type { AssetURLOptions, AssetURLTagConfig } from '@vue/compiler-sfc'
 import type { Addon, AddonsOptions } from 'unimport'
 import {
@@ -20,7 +18,12 @@ import {
 import { VuetifyStylesVitePlugin } from '@unvuetify/vite-styles-plugin'
 import defu from 'defu'
 
-export type { VuetifyComponentsOptions, VuetifyComposablesOptions, VuetifyDirectivesOptions, VuetifyStylesOptions }
+export type {
+  VuetifyComponentsOptions,
+  VuetifyComposablesOptions,
+  VuetifyDirectivesOptions,
+  VuetifyStylesOptions,
+}
 
 export interface VuetifyNuxtOptions {
   directives?: VuetifyDirectivesOptions
