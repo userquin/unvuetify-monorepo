@@ -38,7 +38,7 @@ This monorepo has been created due to the existing limitations when using `vite-
 ## 👀 Package features comparison
 
 > [!NOTE]
-> `unimport` requires a patch to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4/v5` release: check https://github.com/unjs/unimport/pull/447.
+> `unimport` requires a patch to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4.2.1/v5.0.1` release: check https://github.com/unjs/unimport/pull/447.
 
 > [!NOTE]
 > Nuxt 3.16.2 requires a patch to support Vue Lazy Hydration, should be fixed in 3.17.0.
