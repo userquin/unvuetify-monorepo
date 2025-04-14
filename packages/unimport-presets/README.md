@@ -29,6 +29,12 @@ yarn add @unvuetify/unimport-presets
 bun add @unvuetify/unimport-presets
 ```
 
+## 🦄 Usage
+
+Check the `unimport` playgrounds:
+- [basic-unimport](../../playgrounds/basic-unimport)
+- [prefix-unimport](../../playgrounds/prefix-unimport)
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

@@ -29,6 +29,12 @@ yarn add @unvuetify/unplugin-vue-components-resolvers
 bun add @unvuetify/unplugin-vue-components-resolvers
 ```
 
+## 🦄 Usage
+
+Check the `unplugin-vue-components` playgrounds:
+- [basic-resolvers](../../playgrounds/basic-resolvers)
+- [prefix-resolvers](../../playgrounds/prefix-resolvers)
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

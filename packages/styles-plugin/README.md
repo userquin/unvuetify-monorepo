@@ -29,6 +29,14 @@ yarn add @unvuetify/vite-styles-plugin
 bun add @unvuetify/vite-styles-plugin
 ```
 
+## 🦄 Usage
+
+Check the `unimport` and `unplugin-vue-components` playgrounds:
+- [basic-unimport](../../playgrounds/basic-unimport)
+- [prefix-unimport](../../playgrounds/prefix-unimport)
+- [basic-resolvers](../../playgrounds/basic-resolvers)
+- [prefix-resolvers](../../playgrounds/prefix-resolvers)
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

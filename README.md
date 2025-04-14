@@ -26,6 +26,7 @@ This monorepo has been created due to the existing limitations when using `vite-
 - 💥 **Vue Lazy Hydration support**: ready to use [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) with Vuetify components and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support)
 - 🔌 **Extensible**: allow prefixing Vuetify components, directives and composables with `Vuetify` prefix
 - ✨ **VSCode directives completions**
+- ✨ **Nuxt 2 utilities**
 - 🦾 **Type Strong**: written in [TypeScript](https://www.typescriptlang.org/)
 
 ## 🛠️ Packages
