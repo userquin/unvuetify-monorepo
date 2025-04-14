@@ -6,6 +6,9 @@
     "module": "preserve",
     "moduleResolution": "Bundler",
     "paths": {
+      "@unvuetify/nuxt-utils": [
+        "./packages/nuxt-utils/src/"
+      ],
       "@unvuetify/shared": [
         "./packages/shared/src/"
       ],

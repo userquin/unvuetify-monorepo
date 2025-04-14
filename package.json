@@ -18,10 +18,10 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
-    "build": "pnpm -r --parallel run build",
-    "stub": "pnpm -r --parallel run stub",
+    "build": "pnpm -r --filter=\"./packages/**/\" run build",
+    "stub": "pnpm -r --filter=\"./packages/**/\" run stub",
     "typecheck": "tsc --noEmit",
-    "local:tgz": "pnpm -r --parallel run local:tgz",
+    "local:tgz": "pnpm -r --parallel --filter=\"./packages/**/\" run local:tgz",
     "release": "bumpp -r --excute=\"pnpm i\""
   },
   "devDependencies": {

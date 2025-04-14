@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     'vuetify/styles',
   ],
   alias: {
+    '@unvuetify/nuxt-utils': r('../../packages/nuxt-utils/src/index'),
     '@unvuetify/shared': r('../../packages/shared/src/index'),
     '@unvuetify/vite-styles-plugin': r('../../packages/styles-plugin/src/index'),
     '@unvuetify/unimport-presets': r('../../packages/unimport-presets/src/index'),

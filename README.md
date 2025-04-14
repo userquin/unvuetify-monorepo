@@ -31,9 +31,10 @@ This monorepo has been created due to the existing limitations when using `vite-
 ## 🛠️ Packages
 
 - [@unvuetify/shared](./packages/shared): utilities to resolve Vuetify components and directives
-- [@unvuetify/vite-plugin-styles](./packages/styles-plugin): Vite plugin to load Vuetify sass/scss styles with Nuxt 3 SSR support
 - [@unvuetify/unimport-presets](./packages/unimport-presets): presets to auto-import Vuetify composables and directives
 - [@unvuetify/unplugin-vue-components-resolvers](./packages/unplugin-vue-components-resolvers): resolvers to auto-import Vuetify components and directives
+- [@unvuetify/vite-plugin-styles](./packages/styles-plugin): Vite plugin to load Vuetify sass/scss styles with Nuxt 3 SSR support
+- [@unvuetify/nuxt-utils](./packages/nuxt-utils): utilities to configure Vuetify composables, directives, components and sass/scss styles in your Nuxt 3 application
 
 ## 👀 Package features comparison
 
