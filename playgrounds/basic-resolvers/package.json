@@ -17,9 +17,7 @@
   "devDependencies": {
     "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
-    "@unvuetify/shared": "workspace:*",
-    "@unvuetify/unplugin-vue-components-resolvers": "workspace:*",
-    "@unvuetify/vite-styles-plugin": "workspace:*",
+    "@unvuetify/nuxt-utils": "workspace:*",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
     "sass-embedded": "catalog:",

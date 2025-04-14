@@ -21,6 +21,9 @@ catalogs:
     '@nuxt/module-builder':
       specifier: ^1.0.1
       version: 1.0.1
+    '@nuxt/schema':
+      specifier: ^3.16.2
+      version: 3.16.2
     '@tsconfig/node22':
       specifier: ^22.0.0
       version: 22.0.1
@@ -145,6 +148,22 @@ importers:
         specifier: ^3.8.1
         version: 3.8.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
 
+  packages/nuxt-utils:
+    dependencies:
+      '@unvuetify/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@unvuetify/unimport-presets':
+        specifier: workspace:*
+        version: link:../unimport-presets
+      '@unvuetify/vite-styles-plugin':
+        specifier: workspace:*
+        version: link:../styles-plugin
+    devDependencies:
+      '@nuxt/schema':
+        specifier: 'catalog:'
+        version: 3.16.2
+
   packages/shared:
     dependencies:
       upath:
@@ -208,15 +227,9 @@ importers:
       '@nuxt/fonts':
         specifier: 'catalog:'
         version: 0.11.1(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))
-      '@unvuetify/shared':
+      '@unvuetify/nuxt-utils':
         specifier: workspace:*
-        version: link:../../packages/shared
-      '@unvuetify/unimport-presets':
-        specifier: workspace:*
-        version: link:../../packages/unimport-presets
-      '@unvuetify/vite-styles-plugin':
-        specifier: workspace:*
-        version: link:../../packages/styles-plugin
+        version: link:../../packages/nuxt-utils
       sass-embedded:
         specifier: 'catalog:'
         version: 1.86.3
@@ -254,15 +267,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.14.1
-      '@unvuetify/shared':
+      '@unvuetify/nuxt-utils':
         specifier: workspace:*
-        version: link:../../packages/shared
-      '@unvuetify/unplugin-vue-components-resolvers':
-        specifier: workspace:*
-        version: link:../../packages/unplugin-vue-components-resolvers
-      '@unvuetify/vite-styles-plugin':
-        specifier: workspace:*
-        version: link:../../packages/styles-plugin
+        version: link:../../packages/nuxt-utils
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 5.2.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
@@ -376,15 +383,9 @@ importers:
       '@nuxt/fonts':
         specifier: 'catalog:'
         version: 0.11.1(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))
-      '@unvuetify/shared':
+      '@unvuetify/nuxt-utils':
         specifier: workspace:*
-        version: link:../../packages/shared
-      '@unvuetify/unimport-presets':
-        specifier: workspace:*
-        version: link:../../packages/unimport-presets
-      '@unvuetify/vite-styles-plugin':
-        specifier: workspace:*
-        version: link:../../packages/styles-plugin
+        version: link:../../packages/nuxt-utils
       sass-embedded:
         specifier: 'catalog:'
         version: 1.86.3

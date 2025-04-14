@@ -8,7 +8,9 @@ function r(p: string) {
 type Key = 'presets' | 'resolvers' | 'shared' | 'styles' | 'nuxt'
 
 export const alias: Record<Key, Record<string, string>> = {
-  nuxt: {},
+  nuxt: {
+    '@unvuetify/nuxt-utils': r('./packages/nuxt-utils/src/'),
+  },
   presets: {
     '@unvuetify/unimport-presets': r('./packages/unimport-presets/src/'),
   },
