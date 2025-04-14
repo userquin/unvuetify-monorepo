@@ -39,36 +39,32 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
   } = options
 
   const imports = nuxt.options.imports
-  const { autoImport = true } = imports
+  imports.addons = enableDirectives(imports.addons as AddonsOptions | Addon[] | undefined)
 
-  if (autoImport) {
-    imports.addons = enableDirectives(imports.addons as AddonsOptions | Addon[] | undefined)
+  nuxt.hook('imports:sources', (sources) => {
+    sources.push(
+      VuetifyDirectives(directives),
+      VuetifyComposables(composables),
+    )
+  })
 
-    nuxt.hook('imports:sources', (sources) => {
-      sources.push(
-        VuetifyDirectives(directives),
-        VuetifyComposables(composables),
-      )
-    })
-
-    nuxt.hook('components:extend', async (registry) => {
-      const c = await prepareVuetifyComponents(components)
-      for (const component of c) {
-        registry.push({
-          pascalName: component.pascalName,
-          kebabName: component.kebabName,
-          export: component.export,
-          filePath: component.filePath,
-          shortPath: component.filePath,
-          chunkName: component.kebabName,
-          prefetch: false,
-          preload: false,
-          global: false,
-          mode: 'all',
-        })
-      }
-    })
-  }
+  nuxt.hook('components:extend', async (registry) => {
+    const c = await prepareVuetifyComponents(components)
+    for (const component of c) {
+      registry.push({
+        pascalName: component.pascalName,
+        kebabName: component.kebabName,
+        export: component.export,
+        filePath: component.filePath,
+        shortPath: component.filePath,
+        chunkName: component.kebabName,
+        prefetch: false,
+        preload: false,
+        global: false,
+        mode: 'all',
+      })
+    }
+  })
 
   nuxt.hook('vite:extendConfig', (viteInlineConfig) => {
     viteInlineConfig.optimizeDeps = defu(viteInlineConfig.optimizeDeps, {
@@ -88,11 +84,8 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
       ]
     }
 
-    if (!autoImport && components?.prefix === true)
-      console.warn('Vuetify components prefix enable but Nuxt autoImport is disabled, the prefix will not be applied to Vue "template.transformAssetsUrl"!.')
-
     const transformAssetUrls = configureTransformAssetUrls(
-      autoImport && components?.prefix === true,
+      components?.prefix === true,
       viteInlineConfig,
     )
     viteInlineConfig.vue ??= {}
