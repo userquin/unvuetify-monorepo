@@ -13,6 +13,22 @@
 Shared utilities for Vuetify components and directives.
 </p>
 
+## 📦 Install
+
+```bash
+# pnpm
+pnpm add @unvuetify/shared
+
+# npm
+npm i @unvuetify/shared
+
+# yarn
+yarn add @unvuetify/shared
+
+# bun
+bun add @unvuetify/shared
+```
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

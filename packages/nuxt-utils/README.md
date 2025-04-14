@@ -13,6 +13,22 @@
 Nuxt 3 utilities for Vuetify.
 </p>
 
+## 📦 Install
+
+```bash
+# pnpm
+pnpm add @unvuetify/nuxt-utils
+
+# npm
+npm i @unvuetify/nuxt-utils
+
+# yarn
+yarn add @unvuetify/nuxt-utils
+
+# bun
+bun add @unvuetify/nuxt-utils
+```
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

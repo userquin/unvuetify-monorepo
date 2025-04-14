@@ -13,6 +13,22 @@
 Vuetify unimport presets for composables and directives.
 </p>
 
+## 📦 Install
+
+```bash
+# pnpm
+pnpm add @unvuetify/unimport-presets
+
+# npm
+npm i @unvuetify/unimport-presets
+
+# yarn
+yarn add @unvuetify/unimport-presets
+
+# bun
+bun add @unvuetify/unimport-presets
+```
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

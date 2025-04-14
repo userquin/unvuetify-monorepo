@@ -13,6 +13,22 @@
 Vuetify unplugin-vue-components resolvers for components and directives.
 </p>
 
+## 📦 Install
+
+```bash
+# pnpm
+pnpm add @unvuetify/unplugin-vue-components-resolvers
+
+# npm
+npm i @unvuetify/unplugin-vue-components-resolvers
+
+# yarn
+yarn add @unvuetify/unplugin-vue-components-resolvers
+
+# bun
+bun add @unvuetify/unplugin-vue-components-resolvers
+```
+
 ## 📄 License
 
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
