@@ -88,6 +88,9 @@ patchedDependencies:
   nuxt@3.16.2:
     hash: 0f6127523563e4a7063ee04e1c98bb22adba13e280dd4ce12412dcdcf9e8b08d
     path: patches/nuxt@3.16.2.patch
+  unimport@4.2.0:
+    hash: d260cc4d75ed5875cc433693fb2ad35964d97570b21f679a90d1bdbdae6e39ae
+    path: patches/unimport@4.2.0.patch
 
 importers:
 
@@ -5635,7 +5638,7 @@ snapshots:
       std-env: 3.9.0
       ufo: 1.6.1
       unctx: 2.4.1
-      unimport: 4.2.0
+      unimport: 4.2.0(patch_hash=d260cc4d75ed5875cc433693fb2ad35964d97570b21f679a90d1bdbdae6e39ae)
       untyped: 2.0.0
     transitivePeerDependencies:
       - magicast
@@ -8426,7 +8429,7 @@ snapshots:
       ultrahtml: 1.6.0
       uncrypto: 0.1.3
       unctx: 2.4.1
-      unimport: 4.2.0
+      unimport: 4.2.0(patch_hash=d260cc4d75ed5875cc433693fb2ad35964d97570b21f679a90d1bdbdae6e39ae)
       unplugin: 2.3.2
       unplugin-vue-router: 0.12.0(vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)))(vue@3.5.13(typescript@5.8.3))
       unstorage: 1.15.0(db0@0.3.1)(ioredis@5.6.1)
@@ -9507,7 +9510,7 @@ snapshots:
       css-tree: 3.1.0
       ohash: 1.1.6
 
-  unimport@4.2.0:
+  unimport@4.2.0(patch_hash=d260cc4d75ed5875cc433693fb2ad35964d97570b21f679a90d1bdbdae6e39ae):
     dependencies:
       acorn: 8.14.1
       escape-string-regexp: 5.0.0
@@ -9565,7 +9568,7 @@ snapshots:
       local-pkg: 1.1.1
       magic-string: 0.30.17
       picomatch: 4.0.2
-      unimport: 4.2.0
+      unimport: 4.2.0(patch_hash=d260cc4d75ed5875cc433693fb2ad35964d97570b21f679a90d1bdbdae6e39ae)
       unplugin: 2.3.2
       unplugin-utils: 0.2.4
     optionalDependencies:

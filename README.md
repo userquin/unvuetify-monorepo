@@ -38,6 +38,9 @@ This monorepo has been created due to the existing limitations when using `vite-
 ## 👀 Package features comparison
 
 > [!NOTE]
+> `unimport` requires a patch to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4/v5` release: check https://github.com/unjs/unimport/pull/447.
+
+> [!NOTE]
 > Nuxt 3.16.2 requires a patch to support Vue Lazy Hydration, should be fixed in 3.17.0.
 
 Feature / Package | vite-plugin-vuetify | webpack-plugin-vuetify | styles[^1] | resolvers[^2] | presets[^3] | Nuxt[^4] |
@@ -56,7 +59,7 @@ VSCode directives suggestions | ❌                   | ❌                     
 [^2]: `@unvuetify/unplugin-vue-components-resolvers`
 [^3]: `@unvuetify/unimport-presets`
 [^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo
-[^5]: `@unvuetify/unimport-presets` components preset can be used with Nuxt components loader
+[^5]: `@unvuetify/unimport-presets` components preset can be used with Nuxt components loader, won't work with Vite
 [^6]: `vite-plugin-vuetify` will work, but we can get some warnings about missing sources
 [^7]: `webpack-plugin-vuetify` not tested with Nuxt 3 with or without SSR
 [^8]: `@unvuetify/unimport-presets` components preset can be used with Nuxt imports
