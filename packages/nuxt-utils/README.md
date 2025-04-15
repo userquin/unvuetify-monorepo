@@ -33,7 +33,7 @@ bun add @unvuetify/nuxt-utils
 
 We suggest you to use [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/), there are a lot of options to configure Vuetify including SSR support and [HTTP Client Hints](https://nuxt.vuetifyjs.com/guide/server-side-rendering.html#server-side-rendering-ssr).
 
-If you just want to configure Vuetify in your Nuxt 3 app, you can use the `configureVuetify` in a new module, drop the following module in your Nuxt modules folder:
+If you just want to auto-import Vuetify components, composables and directives in your Nuxt 3 app, you can use the `configureVuetify` in a new module, create the following module in your Nuxt modules folder:
 
 ```ts
 // modules/vuetify.ts
@@ -56,6 +56,22 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     configureVuetify(nuxt, options)
   },
+})
+```
+
+then, run the `nuxt prepare` command and add the options to your `nuxt.config.ts` using the `vuetify` key:
+
+```ts
+// nuxt.config.ts
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  /* other nuxt options */
+  vuetify: {
+    composables: { /* composables options */ },
+    components: { /* components options */ },  
+    directives: { /* directives options */ }, 
+    styles: { /* styles options */ }  
+  }
 })
 ```
 
