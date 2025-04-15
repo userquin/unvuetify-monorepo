@@ -25,9 +25,29 @@ This monorepo has been created due to the existing limitations when using `vite-
 - ⚡ **Fully Tree Shakable**: use [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) resolvers or [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import) presets and only used Vuetify composables, components and directives will be included in the final bundle
 - 💥 **Vue Lazy Hydration support**: ready to use [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) with Vuetify components and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support)
 - 🔌 **Extensible**: allow prefixing Vuetify components, directives and composables with `Vuetify` prefix
-- ✨ **VSCode directives completions**
-- ✨ **Nuxt 2 utilities**
+- ✨ **VSCode directives** suggestions
+- ⚙️ **Nuxt 3/4 utilities**: drop a simple Nuxt module and it will auto-import all Vuetify components, directives and composables
 - 🦾 **Type Strong**: written in [TypeScript](https://www.typescriptlang.org/)
+
+## 🦄 Usage
+
+There are a lot of packages/modules in this repository, our suggestion is to use the following packages when using:
+- Vite:
+  - `@unvuetify/unimport-presets` for composables and directives presets via `unplugin-auto-import`
+  - `@unvuetify/unplugin-vue-components-resolvers` resolvers for components via `unplugin-vue-components`
+  - `@unvuetify/vite-plugin-styles` for styles
+- Nuxt:
+  - [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) for all Vuetify features
+- Nuxt basic (check [nuxt-utils usage](./packages/nuxt-utils/README.md#-usage)):
+  - `@unvuetify/nuxt-utils` via Nuxt module using `configureVuetify` function
+
+Check the playgrounds for further details:
+- [basic-nuxt](../../playgrounds/basic-nuxt)
+- [basic-resolvers](../../playgrounds/basic-resolvers)
+- [basic-unimport](../../playgrounds/basic-unimport)
+- [prefix-nuxt](../../playgrounds/prefix-nuxt)
+- [prefix-resolvers](../../playgrounds/prefix-resolvers)
+- [prefix-unimport](../../playgrounds/prefix-unimport)
 
 ## 🛠️ Packages
 
@@ -43,7 +63,7 @@ This monorepo has been created due to the existing limitations when using `vite-
 > `unimport` requires a patch to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4.2.1/v5.0.1` release: check https://github.com/unjs/unimport/pull/447.
 
 > [!NOTE]
-> Nuxt 3.16.2 requires a patch to support Vue Lazy Hydration, should be fixed in 3.17.0.
+> Nuxt 3.16.2 requires a patch to support Vue Lazy Hydration, should be fixed in 3.17.0: check https://github.com/nuxt/nuxt/pull/31649.
 
 Feature / Package | vite-plugin-vuetify | webpack-plugin-vuetify | styles[^1] | resolvers[^2] | presets[^3] | Nuxt[^4] |
 ----------------|---------------------|------------------------|-----------------------|---------------|-------------|----------
