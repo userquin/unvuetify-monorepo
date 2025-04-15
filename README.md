@@ -15,7 +15,7 @@ Unified Vuetify utilities.
 
 ## 🚨 Motivation
 
-This monorepo has been created due to the existing limitations when using `vite-plugin-vuetify/webpack-plugin-vuetify` and the new features added in Vue 3.5 and Nuxt 3.16: [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support). Check the [comparison table](#package-features-comparison) for more details.
+This monorepo has been created due to the existing limitations when using `vite-plugin-vuetify/webpack-plugin-vuetify` and the new features added in Vue 3.5 and Nuxt 3.16: [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support). Check the [comparison table](#-package-features-comparison) for more details.
 
 `@unvuetify` is an alternative to `vite-plugin-vuetify`, you can still use `vite-plugin-vuetify` or `webpack-plugin-vuetify`: the packages in this monorepo have been created to provide support for Vite and Nuxt 3 applications, and to provide a more flexible and extensible API via [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) and [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)/[unimport](https://github.com/unjs/unimport).
 
