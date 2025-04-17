@@ -15,14 +15,13 @@ Vuetify Vite plugin for styles.
 
 <p align='center'>
 <a href='https://www.npmjs.com/package/@unvuetify/vite-plugin-styles' target="__blank">
-<img src='https://img.shields.io/npm/v/@unvuetify/vite-plugin-styles?color=33A6B8&label=' alt="NPM version">
+  <img src='https://img.shields.io/npm/v/@unvuetify/vite-plugin-styles.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
-<a href="https://www.npmjs.com/package/@unvuetify/vite-plugin-styles" target="__blank">
-    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/vite-plugin-styles?color=476582&label=">
+<a href="https://npm.chart.dev/@unvuetify/vite-plugin-styles" target="__blank">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/vite-plugin-styles.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
-<br>
-<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/vite-plugin-styles" target="__blank">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/vite-plugin-styles?style=social">
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 </p>
 

@@ -15,13 +15,13 @@ Vuetify unimport presets for composables and directives.
 
 <p align='center'>
 <a href='https://www.npmjs.com/package/@unvuetify/unimport-presets' target="__blank">
-<img src='https://img.shields.io/npm/v/@unvuetify/unimport-presets?color=33A6B8&label=' alt="NPM version">
+  <img src='https://img.shields.io/npm/v/@unvuetify/unimport-presets.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
-<a href="https://www.npmjs.com/package/@unvuetify/unimport-presets" target="__blank">
-    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unimport-presets?color=476582&label=">
+<a href="https://npm.chart.dev/@unvuetify/unimport-presets" target="__blank">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unimport-presets.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
-  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/unimport-presets.svg?color=476582&label=">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 </p>
 

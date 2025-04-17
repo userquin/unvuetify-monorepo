@@ -15,13 +15,13 @@ Vuetify unplugin-vue-components resolvers for components and directives.
 
 <p align='center'>
 <a href='https://www.npmjs.com/package/@unvuetify/unplugin-vue-components-resolvers' target="__blank">
-<img src='https://img.shields.io/npm/v/@unvuetify/unplugin-vue-components-resolvers?color=33A6B8&label=' alt="NPM version">
+  <img src='https://img.shields.io/npm/v/@unvuetify/unplugin-vue-components-resolvers.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
-<a href="https://www.npmjs.com/package/@unvuetify/unplugin-vue-components-resolvers" target="__blank">
-    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unplugin-vue-components-resolvers?color=476582&label=">
+<a href="https://npm.chart.dev/@unvuetify/unplugin-vue-components-resolvers" target="__blank">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unplugin-vue-components-resolvers.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
-  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/unplugin-vue-components-resolvers.svg?color=476582&label=">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 </p>
 

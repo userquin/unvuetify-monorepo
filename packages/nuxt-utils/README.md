@@ -13,7 +13,7 @@
 Nuxt 3 utilities for Vuetify.
 </p>
 
-<p align='center' style="text-decoration: none;">
+<p align='center'>
 <a href='https://www.npmjs.com/package/@unvuetify/nuxt-utils' target="__blank">
   <img src='https://img.shields.io/npm/v/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
