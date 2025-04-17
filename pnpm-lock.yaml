@@ -285,9 +285,15 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.14.1
-      '@unvuetify/nuxt-utils':
+      '@unvuetify/shared':
         specifier: workspace:*
-        version: link:../../packages/nuxt-utils
+        version: link:../../packages/shared
+      '@unvuetify/unplugin-vue-components-resolvers':
+        specifier: workspace:*
+        version: link:../../packages/unplugin-vue-components-resolvers
+      '@unvuetify/vite-styles-plugin':
+        specifier: workspace:*
+        version: link:../../packages/styles-plugin
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 5.2.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
