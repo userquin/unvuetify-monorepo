@@ -59,6 +59,7 @@ async function replaceDependencies(path) {
       }, {})
     }
   }
+
   await fsPromises.writeFile(path, JSON.stringify(packageJson, null, 2), 'utf-8')
 }
 
