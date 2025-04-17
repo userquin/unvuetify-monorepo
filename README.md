@@ -81,8 +81,7 @@ VSCode directives suggestions | ❌                   | ❌                     
 [^2]: `@unvuetify/unplugin-vue-components-resolvers`.
 [^3]: `@unvuetify/unimport-presets`.
 [^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo.
-
-  `@unvuetify/nuxt-utils` supports all the features, but it is not a drop-in replacement for `vuetify-nuxt-module`.
+[^4]: `@unvuetify/nuxt-utils` supports all the features, but it is not a drop-in replacement for `vuetify-nuxt-module`.
 [^5]: `@unvuetify/unimport-presets` components preset can be used with Nuxt components loader, won't work with Vite.
 [^6]: `vite-plugin-vuetify` will work, but we can get some warnings about missing sources.
 [^7]: `webpack-plugin-vuetify` not tested with Nuxt 3 with or without SSR.
