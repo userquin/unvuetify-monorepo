@@ -21,7 +21,7 @@ Nuxt 3 utilities for Vuetify.
   <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
-  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://nuxt.com" target="__blank">
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js">
