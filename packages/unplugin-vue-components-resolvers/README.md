@@ -20,9 +20,8 @@ Vuetify unplugin-vue-components resolvers for components and directives.
 <a href="https://www.npmjs.com/package/@unvuetify/unplugin-vue-components-resolvers" target="__blank">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unplugin-vue-components-resolvers?color=476582&label=">
 </a>
-<br>
-<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/unplugin-vue-components-resolvers" target="__blank">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/unplugin-vue-components-resolvers?style=social">
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/unplugin-vue-components-resolvers.svg?color=476582&label=">
 </a>
 </p>
 

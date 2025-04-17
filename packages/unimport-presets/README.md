@@ -20,9 +20,8 @@ Vuetify unimport presets for composables and directives.
 <a href="https://www.npmjs.com/package/@unvuetify/unimport-presets" target="__blank">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unimport-presets?color=476582&label=">
 </a>
-<br>
-<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/unimport-presets" target="__blank">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/unimport-presets?style=social">
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/unimport-presets.svg?color=476582&label=">
 </a>
 </p>
 

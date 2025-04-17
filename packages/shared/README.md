@@ -20,9 +20,8 @@ Shared utilities for Vuetify components and directives.
 <a href="https://www.npmjs.com/package/@unvuetify/shared" target="__blank">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/shared?color=476582&label=">
 </a>
-<br>
-<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/shared" target="__blank">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/shared?style=social">
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/shared.svg?color=476582&label=">
 </a>
 </p>
 
