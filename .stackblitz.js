@@ -44,10 +44,7 @@ const pnpmCatalogs = {
   'vuetify': '^3.8.1',
 }
 
-/**
- * @param path {string}
- * @param nuxt {boolean}
- */
+/** @param path {string} */
 async function disableNuxtFonts(path) {
   let content = await fsPromises.readFile(path, { encoding: 'utf-8' })
   content = content.replace(
@@ -57,6 +54,18 @@ async function disableNuxtFonts(path) {
   )
 
   await fsPromises.writeFile(path, content, 'utf-8')
+}
+
+/** @param path {string} */
+async function overrideNuxtSettings(path) {
+  const template = `
+  $font: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', Arial, sans-serif;
+
+@use 'vuetify/settings' with (
+  $body-font-family: $font
+);
+`
+  await fsPromises.writeFile(path, template, 'utf-8')
 }
 
 /** @param path {string} */
@@ -121,6 +130,9 @@ async function updateProjectStructure() {
     // remove nuxt fonts module
     disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
     disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),
+    // override nuxt settings.scss
+    overrideNuxtSettings(resolve('./playgrounds/prefix-nuxt/app/assets/settings.scss')),
+    overrideNuxtSettings(resolve('./playgrounds/basic-nuxt/app/assets/settings.scss')),
   ])
 
   await Promise.all([
