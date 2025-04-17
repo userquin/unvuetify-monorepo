@@ -57,6 +57,9 @@ Check the playgrounds for further details:
 - [prefix-resolvers](./playgrounds/prefix-resolvers)
 - [prefix-unimport](./playgrounds/prefix-unimport)
 
+> [!WARNING]
+> `@nuxt/fonts` disabled and `settings.scss` files updated to run Nuxt playgrounds when running at StackBlitz.
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
 
 ## 👀 Package features comparison
