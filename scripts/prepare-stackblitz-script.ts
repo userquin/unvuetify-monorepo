@@ -39,7 +39,7 @@ updateProjectStructure()
 /** @type {Record<string, string>} */
 const pnpmCatalogs = ${dependencies}
 
-/** @type {string} */
+/** @param path {string} */
 async function replaceDependencies(path) {
   const packageJson = JSON.parse(await fsPromises.readFile(path, { encoding: 'utf8' }))
   for (const key of ['peerDependencies', 'devDependencies', 'dependencies', 'resolutions']) {
