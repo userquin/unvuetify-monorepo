@@ -68,9 +68,9 @@ export default defineNuxtConfig({
   /* other nuxt options */
   vuetify: {
     composables: { /* composables options */ },
-    components: { /* components options */ },  
-    directives: { /* directives options */ }, 
-    styles: { /* styles options */ }  
+    components: { /* components options */ },
+    directives: { /* directives options */ },
+    styles: { /* styles options */ }
   }
 })
 ```
