@@ -13,6 +13,19 @@
 Vuetify unimport presets for composables and directives.
 </p>
 
+<p align='center'>
+<a href='https://www.npmjs.com/package/@unvuetify/unimport-presets' target="__blank">
+<img src='https://img.shields.io/npm/v/@unvuetify/unimport-presets?color=33A6B8&label=' alt="NPM version">
+</a>
+<a href="https://www.npmjs.com/package/@unvuetify/unimport-presets" target="__blank">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unimport-presets?color=476582&label=">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/unimport-presets" target="__blank">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/unimport-presets?style=social">
+</a>
+</p>
+
 ## 📦 Install
 
 ```bash
@@ -32,9 +45,9 @@ bun add @unvuetify/unimport-presets
 ## 🦄 Usage
 
 Check the `unimport` playgrounds:
-- [basic-unimport](../../playgrounds/basic-unimport)
-- [prefix-unimport](../../playgrounds/prefix-unimport)
+- [basic-unimport](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-unimport)
+- [prefix-unimport](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-unimport)
 
 ## 📄 License
 
-[MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
+[MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

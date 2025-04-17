@@ -13,6 +13,19 @@
 Vuetify Vite plugin for styles.
 </p>
 
+<p align='center'>
+<a href='https://www.npmjs.com/package/@unvuetify/vite-plugin-styles' target="__blank">
+<img src='https://img.shields.io/npm/v/@unvuetify/vite-plugin-styles?color=33A6B8&label=' alt="NPM version">
+</a>
+<a href="https://www.npmjs.com/package/@unvuetify/vite-plugin-styles" target="__blank">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/vite-plugin-styles?color=476582&label=">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/vite-plugin-styles" target="__blank">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/vite-plugin-styles?style=social">
+</a>
+</p>
+
 ## 📦 Install
 
 ```bash
@@ -32,11 +45,11 @@ bun add @unvuetify/vite-styles-plugin
 ## 🦄 Usage
 
 Check the `unimport` and `unplugin-vue-components` playgrounds:
-- [basic-unimport](../../playgrounds/basic-unimport)
-- [prefix-unimport](../../playgrounds/prefix-unimport)
-- [basic-resolvers](../../playgrounds/basic-resolvers)
-- [prefix-resolvers](../../playgrounds/prefix-resolvers)
+- [basic-unimport](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-unimport)
+- [prefix-unimport](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-unimport)
+- [basic-resolvers](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-resolvers)
+- [prefix-resolvers](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-resolvers)
 
 ## 📄 License
 
-[MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
+[MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

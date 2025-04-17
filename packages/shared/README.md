@@ -13,6 +13,19 @@
 Shared utilities for Vuetify components and directives.
 </p>
 
+<p align='center'>
+<a href='https://www.npmjs.com/package/@unvuetify/shared' target="__blank">
+<img src='https://img.shields.io/npm/v/@unvuetify/shared?color=33A6B8&label=' alt="NPM version">
+</a>
+<a href="https://www.npmjs.com/package/@unvuetify/shared" target="__blank">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/shared?color=476582&label=">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/shared" target="__blank">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/shared?style=social">
+</a>
+</p>
+
 ## 📦 Install
 
 ```bash
@@ -31,4 +44,4 @@ bun add @unvuetify/shared
 
 ## 📄 License
 
-[MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
+[MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

@@ -13,6 +13,19 @@
 Nuxt 3 utilities for Vuetify.
 </p>
 
+<p align='center'>
+<a href='https://www.npmjs.com/package/@unvuetify/nuxt-utils' target="__blank">
+<img src='https://img.shields.io/npm/v/@unvuetify/nuxt-utils?color=33A6B8&label=' alt="NPM version">
+</a>
+<a href="https://www.npmjs.com/package/@unvuetify/nuxt-utils" target="__blank">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-utils?color=476582&label=">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/nuxt-utils" target="__blank">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/nuxt-utils?style=social">
+</a>
+</p>
+
 ## 📦 Install
 
 ```bash
@@ -33,7 +46,7 @@ bun add @unvuetify/nuxt-utils
 
 We suggest you to use [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/), there are a lot of options to configure Vuetify including SSR support and [HTTP Client Hints](https://nuxt.vuetifyjs.com/guide/server-side-rendering.html#server-side-rendering-ssr).
 
-If you just want to auto-import Vuetify components, composables and directives in your Nuxt 3 app, you can use the `configureVuetify` in a new module, create the following module in your Nuxt modules folder:
+If you just want to auto-import Vuetify components, composables and directives and use sass/scss variables in your Nuxt 3 app, you can use the `configureVuetify` in a new module, create the following module in your Nuxt modules folder:
 
 ```ts
 // modules/vuetify.ts
@@ -59,7 +72,7 @@ export default defineNuxtModule<ModuleOptions>({
 })
 ```
 
-then, run the `nuxt prepare` command and add the options to your `nuxt.config.ts` using the `vuetify` key:
+then, run the `nuxt/nuxi prepare` command and add the options to your `nuxt.config.ts` using the `vuetify` key:
 
 ```ts
 // nuxt.config.ts
@@ -76,9 +89,9 @@ export default defineNuxtConfig({
 ```
 
 Check the `nuxt` playgrounds:
-- [basic-nuxt](../../playgrounds/basic-nuxt)
-- [prefix-nuxt](../../playgrounds/prefix-nuxt)
+- [basic-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-nuxt)
+- [prefix-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-nuxt)
 
 ## 📄 License
 
-[MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
+[MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)

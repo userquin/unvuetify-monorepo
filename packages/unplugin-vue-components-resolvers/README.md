@@ -13,6 +13,19 @@
 Vuetify unplugin-vue-components resolvers for components and directives.
 </p>
 
+<p align='center'>
+<a href='https://www.npmjs.com/package/@unvuetify/unplugin-vue-components-resolvers' target="__blank">
+<img src='https://img.shields.io/npm/v/@unvuetify/unplugin-vue-components-resolvers?color=33A6B8&label=' alt="NPM version">
+</a>
+<a href="https://www.npmjs.com/package/@unvuetify/unplugin-vue-components-resolvers" target="__blank">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/unplugin-vue-components-resolvers?color=476582&label=">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/packages/unplugin-vue-components-resolvers" target="__blank">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/@unvuetify/unplugin-vue-components-resolvers?style=social">
+</a>
+</p>
+
 ## 📦 Install
 
 ```bash
@@ -32,9 +45,9 @@ bun add @unvuetify/unplugin-vue-components-resolvers
 ## 🦄 Usage
 
 Check the `unplugin-vue-components` playgrounds:
-- [basic-resolvers](../../playgrounds/basic-resolvers)
-- [prefix-resolvers](../../playgrounds/prefix-resolvers)
+- [basic-resolvers](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-resolvers)
+- [prefix-resolvers](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-resolvers)
 
 ## 📄 License
 
-[MIT](./LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
+[MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
