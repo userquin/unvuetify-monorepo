@@ -125,8 +125,8 @@ async function updateProjectStructure() {
     disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
     disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),
     // override nuxt settings.scss
-    overrideNuxtSettings(resolve('./playgrounds/prefix-nuxt/app/assets/settings.scss')),
     overrideNuxtSettings(resolve('./playgrounds/basic-nuxt/app/assets/settings.scss')),
+    overrideNuxtSettings(resolve('./playgrounds/prefix-nuxt/app/assets/settings.scss')),
   ])
 
   await Promise.all([
