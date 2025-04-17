@@ -144,10 +144,6 @@ async function updateProjectStructure() {
     // disable vite plugin styles config file
     disableVuetifyConfigFileStyles(resolve('./playgrounds/basic-nuxt/nuxt.config.ts'), true),
     disableVuetifyConfigFileStyles(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts'), true),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/basic-unimport/vite.config.ts'), false),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/prefix-unimport/vite.config.ts'), false),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/basic-resolvers/vite.config.ts'), false),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/prefix-resolvers/vite.config.ts'), false),
   ])
 
   await Promise.all([
