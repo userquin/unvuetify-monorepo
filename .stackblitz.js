@@ -48,15 +48,13 @@ const pnpmCatalogs = {
  * @param path {string}
  * @param nuxt {boolean}
  */
-async function disableVuetifyConfigFileStyles(path, nuxt) {
+async function disableNuxtFonts(path) {
   let content = await fsPromises.readFile(path, { encoding: 'utf-8' })
-  if (nuxt) {
-    content = content.replace(
-      'modules: [\'@nuxt/fonts\'],',
-      `// disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
+  content = content.replace(
+    '  modules: [\'@nuxt/fonts\'],',
+    `  // disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
   // modules: ['@nuxt/fonts'],`,
-    )
-  }
+  )
 
   await fsPromises.writeFile(path, content, 'utf-8')
 }
@@ -121,8 +119,8 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),
     // disable vite plugin styles config file
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/basic-nuxt/nuxt.config.ts'), true),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts'), true),
+    disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
+    disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),
   ])
 
   await Promise.all([
