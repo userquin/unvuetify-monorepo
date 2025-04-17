@@ -43,44 +43,13 @@ const pnpmCatalogs = ${dependencies}
  * @param path {string}
  * @param nuxt {boolean}
  */
-async function disableVuetifyConfigFileStyles(path, nuxt) {
+async function disableNuxtFonts(path) {
   let content = await fsPromises.readFile(path, { encoding: 'utf-8' })
-  if (nuxt) {
-    content = content.replace(
-      'modules: [\\'@nuxt/fonts\\'],',
-      \`// disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
+  content = content.replace(
+    '  modules: [\\'@nuxt/fonts\\'],',
+    \`  // disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
   // modules: ['@nuxt/fonts'],\`,
-    ).replace(\`vuetify: {
-    styles: {
-      mode: {
-        configFile: 'assets/settings.scss',
-      },
-    },
-  },\`, \`vuetify: {
-    // sass-embedded will fallback to sass-dart => error
-    // styles: {
-    //   mode: {
-    //     configFile: 'assets/settings.scss',
-    //   },
-    // },
-  },\`)
-  }
-  else {
-    content = content.replace(\`VuetifyStylesVitePlugin({
-      mode: {
-        configFile: 'src/styles/settings.scss',
-      },
-    }),
-    \`, \`VuetifyStylesVitePlugin({
-      // sass-embedded will fallback to sass-dart => error
-      // styles: {
-      //   mode: {
-      //     configFile: 'assets/settings.scss',
-      //   },
-      // },
-    },
-\`)
-  }
+  )
 
   await fsPromises.writeFile(path, content, 'utf-8')
 }
@@ -112,6 +81,9 @@ async function updateProjectStructure() {
       'nuxt@3.16.2': 'patches/nuxt@3.16.2.patch',
       'unimport@4.2.0': 'patches/unimport@4.2.0.patch',
     },
+    overrides: {
+      'sass-embedded': 'npm:sass@1.86.3',
+    },
   }
   await fsPromises.writeFile(root, JSON.stringify(packageJson, null, 2), 'utf-8')
   await fsPromises.writeFile(
@@ -142,8 +114,8 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),
     // disable vite plugin styles config file
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/basic-nuxt/nuxt.config.ts'), true),
-    disableVuetifyConfigFileStyles(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts'), true),
+    disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
+    disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),
   ])
 
   await Promise.all([
