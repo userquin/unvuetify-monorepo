@@ -12,7 +12,7 @@ interface PnpmWorkspaceYaml {
 
 async function createStackblitzScript() {
   const rootDir = process.cwd()
-  const script = resolve(rootDir, '.xstackblitz.js')
+  const script = resolve(rootDir, '.stackblitz.js')
   const isFile = await lstat(script).then(stat => stat.isFile())
   if (!isFile)
     throw new Error('Run this script from root folder!')
