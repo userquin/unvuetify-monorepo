@@ -58,8 +58,7 @@ async function disableNuxtFonts(path) {
 
 /** @param path {string} */
 async function overrideNuxtSettings(path) {
-  const template = `
-  $font: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', Arial, sans-serif;
+  const template = `$font: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', Arial, sans-serif;
 
 @use 'vuetify/settings' with (
   $body-font-family: $font
