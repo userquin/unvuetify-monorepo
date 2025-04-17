@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/shared",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Shared utilities for Vuetify components and directives",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
