@@ -77,14 +77,14 @@ prefix composables, directives and components | ❌                   | ❌     
 Nuxt Lazy Hydration | ❌                   | ❌                      | ❌                     | ❌             | ✅[^8]       | ✅
 VSCode directives suggestions | ❌                   | ❌                      | ❌                     | ❌             | ✅           | ✅
 
-[^1]: `@unvuetify/vite-plugin-styles`
-[^2]: `@unvuetify/unplugin-vue-components-resolvers`
-[^3]: `@unvuetify/unimport-presets`
-[^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo
-[^5]: `@unvuetify/unimport-presets` components preset can be used with Nuxt components loader, won't work with Vite
-[^6]: `vite-plugin-vuetify` will work, but we can get some warnings about missing sources
-[^7]: `webpack-plugin-vuetify` not tested with Nuxt 3 with or without SSR
-[^8]: `@unvuetify/unimport-presets` components preset can be used with Nuxt imports
+[^1]: `@unvuetify/vite-plugin-styles`.
+[^2]: `@unvuetify/unplugin-vue-components-resolvers`.
+[^3]: `@unvuetify/unimport-presets`.
+[^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo.<br/>`@unvuetify/nuxt-utils` supports all the features, but it is not a drop-in replacement for `vuetify-nuxt-module`.
+[^5]: `@unvuetify/unimport-presets` components preset can be used with Nuxt components loader, won't work with Vite.
+[^6]: `vite-plugin-vuetify` will work, but we can get some warnings about missing sources.
+[^7]: `webpack-plugin-vuetify` not tested with Nuxt 3 with or without SSR.
+[^8]: `@unvuetify/unimport-presets` components preset can be used with Nuxt imports.
 
 ## 📄 License
 
