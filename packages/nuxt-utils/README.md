@@ -13,28 +13,25 @@
 Nuxt 3 utilities for Vuetify.
 </p>
 
-<!--
 <p align='center'>
 <a href='https://www.npmjs.com/package/@unvuetify/nuxt-utils' target="__blank">
-  <img src='https://img.shields.io/npm/v/@unvuetify/nuxt-utils?color=33A6B8&label=' alt="NPM version">
+  <img src='https://img.shields.io/npm/v/@unvuetify/nuxt-utils/latest.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
-<a href="https://www.npmjs.com/package/@unvuetify/nuxt-utils" target="__blank">
-  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-utils?color=476582&label=">
+<a href="https://npm.chart.dev/@unvuetify/nuxt-utils" target="__blank">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
-  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/nuxt-utils.svg?color=476582&label=">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://nuxt.com" target="__blank">
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js">
 </a>
 </p>
--->
-<p align='center'>
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
-</p>
 
 ## 📦 Install
 
