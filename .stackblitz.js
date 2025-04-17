@@ -118,7 +118,7 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/prefix-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),
-    // disable vite plugin styles config file
+    // remove nuxt fonts module
     disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
     disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),
   ])
