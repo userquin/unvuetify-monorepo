@@ -13,6 +13,16 @@
 Unified Vuetify utilities.
 </p>
 
+<p align='center'>
+<a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/unimport-presets.svg?style=flat&colorA=18181B&colorB=1867C0">
+</a>
+<br>
+<a href="https://github.com/userquin/unvuetify-monorepo" target="__blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/userquin/unvuetify-monorepo?style=social">
+</a>
+</p>
+
 ## 🚨 Motivation
 
 This monorepo has been created due to the existing limitations when using `vite-plugin-vuetify/webpack-plugin-vuetify` and the new features added in Vue 3.5 and Nuxt 3.16: [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support). Check the [comparison table](#-package-features-comparison) for more details.
