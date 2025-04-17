@@ -48,7 +48,7 @@ async function disableVuetifyConfigFileStyles(path, nuxt) {
   if (nuxt) {
     content = content.replace(
       'modules: [\\'@nuxt/fonts\\'],',
-      \`  // disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
+      \`// disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
   // modules: ['@nuxt/fonts'],\`,
     ).replace(\`vuetify: {
     styles: {
@@ -56,16 +56,14 @@ async function disableVuetifyConfigFileStyles(path, nuxt) {
         configFile: 'assets/settings.scss',
       },
     },
-  },
-\`, \`vuetify: {
+  },\`, \`vuetify: {
     // sass-embedded will fallback to sass-dart => error
     // styles: {
     //   mode: {
     //     configFile: 'assets/settings.scss',
     //   },
     // },
-  },
-\`)
+  },\`)
   }
   else {
     content = content.replace(\`VuetifyStylesVitePlugin({
