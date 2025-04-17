@@ -19,7 +19,9 @@
     "nuxt 3",
     "vuetify",
     "vuetify 3",
-    "auto-import"
+    "auto-import",
+    "sass",
+    "scss"
   ],
   "sideEffects": false,
   "exports": {
