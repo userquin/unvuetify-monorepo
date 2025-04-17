@@ -42,53 +42,21 @@ const pnpmCatalogs = {
   'vuetify': '^3.8.1',
 }
 
-/** @type {string} */
+/** @param path {string} */
 async function replaceDependencies(path) {
   const packageJson = JSON.parse(await fsPromises.readFile(path, { encoding: 'utf8' }))
-  if (packageJson.devDependencies) {
-    packageJson.devDependencies = Array.from(Object.entries(
-      /** @type {Record<string, string>} */
-      packageJson.devDependencies,
-    )).reduce((acc, [key, value]) => {
-      if (value === 'catalog:')
-        acc[key] = pnpmCatalogs[key] || value
-      return acc
-    }, {})
-  }
-  if (packageJson.dependencies) {
-    packageJson.dependencies = Array.from(Object.entries(
-      /** @type {Record<string, string>} */
-      packageJson.dependencies,
-    )).reduce((acc, [key, value]) => {
-      if (value === 'catalog:')
-        acc[key] = pnpmCatalogs[key] || value
-      return acc
-    }, {})
-  }
-  if (packageJson.resolutions) {
-    packageJson.resolutions = Array.from(Object.entries(
-      /** @type {Record<string, string>} */
-      packageJson.resolutions,
-    )).reduce((acc, [key, value]) => {
-      if (value === 'catalog:')
-        acc[key] = pnpmCatalogs[key] || value
-      return acc
-    }, {})
-  }
-
-  if (packageJson.peerDependencies) {
-    packageJson.peerDependencies = Array.from(
-      Object.entries(
+  for (const key of ['peerDependencies', 'devDependencies', 'dependencies', 'resolutions']) {
+    const entry = packageJson[key]
+    if (entry) {
+      packageJson[key] = Array.from(Object.entries(
         /** @type {Record<string, string>} */
-        packageJson.peerDependencies,
-      ),
-    ).reduce((acc, [key, value]) => {
-      if (value === 'catalog:')
-        acc[key] = pnpmCatalogs[key] || value
-      return acc
-    }, {})
+        entry,
+      )).reduce((acc, [key, value]) => {
+        acc[key] = value === 'catalog:' ? pnpmCatalogs[key] || value : value
+        return acc
+      }, {})
+    }
   }
-
   await fsPromises.writeFile(path, JSON.stringify(packageJson, null, 2), 'utf-8')
 }
 
