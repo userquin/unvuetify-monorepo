@@ -34,7 +34,7 @@ This monorepo has been created due to the existing limitations when using `vite-
 - [@unvuetify/shared](./packages/shared): utilities to resolve Vuetify components and directives
 - [@unvuetify/unimport-presets](./packages/unimport-presets): presets to auto-import Vuetify composables and directives
 - [@unvuetify/unplugin-vue-components-resolvers](./packages/unplugin-vue-components-resolvers): resolvers to auto-import Vuetify components and directives
-- [@unvuetify/vite-plugin-styles](./packages/styles-plugin): Vite plugin to load Vuetify sass/scss styles with Nuxt 3 SSR support
+- [@unvuetify/vite-styles-plugin](./packages/styles-plugin): Vite plugin to load Vuetify sass/scss styles with Nuxt 3 SSR support
 - [@unvuetify/nuxt-utils](./packages/nuxt-utils): utilities to configure Vuetify composables, directives, components and sass/scss styles in your Nuxt 3 application
 
 ## 🦄 Usage
@@ -43,7 +43,7 @@ There are a lot of packages/modules in this repository, our suggestion is to use
 - Vite:
   - `@unvuetify/unimport-presets` for composables and directives presets via `unplugin-auto-import`
   - `@unvuetify/unplugin-vue-components-resolvers` resolvers for components via `unplugin-vue-components`
-  - `@unvuetify/vite-plugin-styles` for styles
+  - `@unvuetify/vite-styles-plugin` for styles
 - Nuxt:
   - [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) for all Vuetify features
 - Nuxt basic (check [nuxt-utils usage](./packages/nuxt-utils/README.md#-usage)):
@@ -82,7 +82,7 @@ prefix composables, directives and components | ❌                   | ❌     
 Nuxt Lazy Hydration | ❌                   | ❌                      | ❌                     | ❌             | ✅[^8]       | ✅
 VSCode directives suggestions | ❌                   | ❌                      | ❌                     | ❌             | ✅           | ✅
 
-[^1]: `@unvuetify/vite-plugin-styles`.
+[^1]: `@unvuetify/vite-styles-plugin`.
 [^2]: `@unvuetify/unplugin-vue-components-resolvers`.
 [^3]: `@unvuetify/unimport-presets`.
 [^4]: `vuetify-nuxt-module` will support all the features once updated using the packages in this monorepo.<br/>`@unvuetify/nuxt-utils` supports all the features, but it is not a drop-in replacement for `vuetify-nuxt-module`.
