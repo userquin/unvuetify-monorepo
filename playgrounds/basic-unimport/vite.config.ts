@@ -3,6 +3,7 @@ import {
   VuetifyDirectives,
 } from '@unvuetify/unimport-presets'
 import { VuetifyVueResolver } from '@unvuetify/unplugin-vue-components-resolvers'
+import { VuetifyStylesVitePlugin } from '@unvuetify/vite-styles-plugin'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import ViteFonts from 'unplugin-fonts/vite'
@@ -41,6 +42,11 @@ export default defineConfig({
           name: 'Roboto',
           styles: 'wght@100;300;400;500;700;900',
         }],
+      },
+    }),
+    VuetifyStylesVitePlugin({
+      mode: {
+        configFile: 'src/styles/settings.scss',
       },
     }),
     Inspect(),

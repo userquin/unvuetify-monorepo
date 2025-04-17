@@ -23,7 +23,8 @@
     "typecheck": "tsc --noEmit",
     "release": "bumpp -r --excute=\"pnpm i\"",
     "local:tgz": "pnpm -r --parallel --filter=\"./packages/**/\" run local:tgz",
-    "test:attw": "pnpm -r --parallel --filter=\"./packages/**/\" test:attw"
+    "test:attw": "pnpm -r --parallel --filter=\"./packages/**/\" test:attw",
+    "prepare-stackblitz-script": "tsx ./scripts/prepare-stackblitz-script.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
@@ -34,7 +35,9 @@
     "bumpp": "catalog:",
     "eslint": "catalog:",
     "pathe": "catalog:",
+    "read-yaml-file": "catalog:",
     "taze": "catalog:",
+    "tsx": "catalog:",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "unimport": "catalog:",
@@ -48,5 +51,9 @@
     "nuxt": "catalog:",
     "vite": "catalog:",
     "vuetify": "catalog:"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && pnpm install && nr stub"
   }
 }

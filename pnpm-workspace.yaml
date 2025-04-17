@@ -22,8 +22,10 @@ catalog:
   eslint: ^9.24.0
   nuxt: 3.16.2
   pathe: ^2.0.3
+  read-yaml-file: ^2.1.0
   sass-embedded: ^1.86.3
   taze: ^19.0.2
+  tsx: ^4.19.3
   typescript: ~5.8.3
   unbuild: ^3.5.0
   unimport: ^5.0.0
