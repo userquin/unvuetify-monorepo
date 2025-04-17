@@ -54,7 +54,6 @@
   },
   "stackblitz": {
     "installDependencies": false,
-    "xstartCommand": "node .stackblitz.js && pnpm install",
-    "startCommand": "node .stackblitz.js"
+    "startCommand": "node .stackblitz.js && pnpm install && nr stub"
   }
 }
