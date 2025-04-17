@@ -57,6 +57,8 @@ Check the playgrounds for further details:
 - [prefix-resolvers](./playgrounds/prefix-resolvers)
 - [prefix-unimport](./playgrounds/prefix-unimport)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/vuetify-nuxt-module)
+
 ## 👀 Package features comparison
 
 > [!NOTE]
