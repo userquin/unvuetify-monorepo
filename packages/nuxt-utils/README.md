@@ -28,11 +28,6 @@ Nuxt 3 utilities for Vuetify.
 </a>
 </p>
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
-
 ## 📦 Install
 
 ```bash
@@ -102,16 +97,3 @@ Check the `nuxt` playgrounds:
 ## 📄 License
 
 [MIT](https://github.com/userquin/unvuetify-monorepo/blob/main/LICENSE) License &copy; 2025-PRESENT [Joaquín Sánchez](https://github.com/userquin)
-
-<!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@unvuetify/nuxt-utils/latest.svg?style=flat&colorA=18181B&colorB=1867C0
-[npm-version-href]: https://www.npmjs.com/package/@unvuetify/nuxt-utils
-
-[npm-downloads-src]: https://img.shields.io/npm/dm/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0
-[npm-downloads-href]: https://npm.chart.dev/@unvuetify/nuxt-utils
-
-[license-src]: https://img.shields.io/npm/l/@nuxt/fonts.svg?style=flat&colorA=18181B&colorB=1867C0
-[license-href]: https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE
-
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com
