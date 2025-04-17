@@ -50,12 +50,12 @@ There are a lot of packages/modules in this repository, our suggestion is to use
   - `@unvuetify/nuxt-utils` via Nuxt module using `configureVuetify` function
 
 Check the playgrounds for further details:
-- [basic-nuxt](../../playgrounds/basic-nuxt)
-- [basic-resolvers](../../playgrounds/basic-resolvers)
-- [basic-unimport](../../playgrounds/basic-unimport)
-- [prefix-nuxt](../../playgrounds/prefix-nuxt)
-- [prefix-resolvers](../../playgrounds/prefix-resolvers)
-- [prefix-unimport](../../playgrounds/prefix-unimport)
+- [basic-nuxt](./playgrounds/basic-nuxt)
+- [basic-resolvers](./playgrounds/basic-resolvers)
+- [basic-unimport](./playgrounds/basic-unimport)
+- [prefix-nuxt](./playgrounds/prefix-nuxt)
+- [prefix-resolvers](./playgrounds/prefix-resolvers)
+- [prefix-unimport](./playgrounds/prefix-unimport)
 
 ## 👀 Package features comparison
 
