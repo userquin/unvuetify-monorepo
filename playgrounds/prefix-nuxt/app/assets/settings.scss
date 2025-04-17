@@ -1,3 +1,5 @@
+$font: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', Arial, sans-serif;
+
 @use 'vuetify/settings' with (
-  $card-elevation: 5
+  $body-font-family: $font
 );
