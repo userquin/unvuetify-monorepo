@@ -55,34 +55,7 @@ async function disableVuetifyConfigFileStyles(path, nuxt) {
       'modules: [\'@nuxt/fonts\'],',
       `// disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
   // modules: ['@nuxt/fonts'],`,
-    ).replace(`vuetify: {
-    styles: {
-      mode: {
-        configFile: 'assets/settings.scss',
-      },
-    },
-  },`, `vuetify: {
-    // sass-embedded will fallback to sass-dart => error
-    // styles: {
-    //   mode: {
-    //     configFile: 'assets/settings.scss',
-    //   },
-    // },
-  },`)
-  }
-  else {
-    content = content.replace(`VuetifyStylesVitePlugin({
-      mode: {
-        configFile: 'src/styles/settings.scss',
-      },
-    }),`, `VuetifyStylesVitePlugin({
-      // sass-embedded will fallback to sass-dart => error
-      // styles: {
-      //   mode: {
-      //     configFile: 'assets/settings.scss',
-      //   },
-      // },
-    }),`)
+    )
   }
 
   await fsPromises.writeFile(path, content, 'utf-8')
@@ -114,6 +87,9 @@ async function updateProjectStructure() {
     patchedDependencies: {
       'nuxt@3.16.2': 'patches/nuxt@3.16.2.patch',
       'unimport@4.2.0': 'patches/unimport@4.2.0.patch',
+    },
+    overrides: {
+      'sass-embedded': 'npm:sass@1.86.3',
     },
   }
   await fsPromises.writeFile(root, JSON.stringify(packageJson, null, 2), 'utf-8')
