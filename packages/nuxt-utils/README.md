@@ -29,10 +29,12 @@ Nuxt 3 utilities for Vuetify.
 </a>
 </p>
 -->
+<p align='center'>
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
+</p>
 
 ## 📦 Install
 
