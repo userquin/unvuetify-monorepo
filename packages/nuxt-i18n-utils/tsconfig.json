@@ -1,4 +1,4 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["i18n.d.ts", "./src/*.ts"],
+  "include": ["i18n.d.ts", "./src/*.ts"]
 }
