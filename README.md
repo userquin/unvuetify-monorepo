@@ -10,7 +10,7 @@
 <h1 align="center">@unvuetify</h1>
 
 <p align="center">
-Unified Vuetify utilities.
+Unified Vuetify utilities for Vite and Nuxt.
 </p>
 
 <p align='center'>
