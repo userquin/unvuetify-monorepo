@@ -33,15 +33,15 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: 📝 Lint
+        run: pnpm lint
+
       - name: 🚧 Build project
         run: pnpm build
 
       # - name: 🧪 Test project
       #   run: pnpm test:ci
       #   timeout-minutes: 10
-
-      - name: 📝 Lint
-        run: pnpm lint
 
       - name: 💪 Type check
         run: pnpm test:typecheck
