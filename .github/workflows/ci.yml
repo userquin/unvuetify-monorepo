@@ -33,6 +33,9 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: 📝 Lint
+        run: pnpm lint
+
       - name: 🚧 Build project
         run: pnpm build
 
@@ -40,11 +43,8 @@ jobs:
       #   run: pnpm test:ci
       #   timeout-minutes: 10
 
-      - name: 📝 Lint
-        run: pnpm lint
-
-      # - name: 💪 Type check
-      #   run: pnpm test:typecheck
+      - name: 💪 Type check
+        run: pnpm test:typecheck
 
       - name: 🛠️ Check types
         if: runner.os != 'windows-latest'

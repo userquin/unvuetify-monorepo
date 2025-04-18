@@ -21,8 +21,9 @@
     "build": "pnpm -r --filter=\"./packages/**/\" run build",
     "stub": "pnpm -r --filter=\"./packages/**/\" run stub",
     "release": "bumpp -r --excute=\"pnpm i\"",
-    "local:tgz": "pnpm -r --parallel --filter=\"./packages/**/\" run local:tgz",
-    "test:typecheck": "tsc --noEmit",
+    "test:packages:typecheck": "pnpm -r --parallel --filter=\"./packages/**/\" test:typecheck",
+    "test:playgrounds:typecheck": "pnpm -r --parallel --filter=\"./playgrounds/**/\" test:typecheck",
+    "test:typecheck": "nr test:packages:typecheck && nr test:playgrounds:typecheck",
     "test:attw": "pnpm -r --parallel --filter=\"./packages/**/\" test:attw",
     "prepare-stackblitz-script": "tsx ./scripts/prepare-stackblitz-script.ts"
   },
