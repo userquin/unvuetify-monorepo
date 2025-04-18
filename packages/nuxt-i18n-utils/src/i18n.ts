@@ -1,11 +1,20 @@
+import type { LocaleObject } from '@nuxtjs/i18n'
 import type { Ref } from 'vue'
 import type { Locale } from 'vue-i18n'
 import type { LocaleInstance, LocaleMessages, LocaleOptions, VuetifyOptions } from 'vuetify'
 import { useI18n, useNuxtApp } from '#imports'
 import { ref, watch } from 'vue'
 
+/**
+ * Configure Vuetify i18n adapter.
+ * @param vuetifyOptions The vuetify options.
+ * @param rtlLocales Default locales list `rtl` used when using `@nuxtjs/i18n` locales without object notation.
+ *
+ * @see https://vuetifyjs.com/en/features/internationalization
+ */
 export function configureVuetifyI18nAdapter(
   vuetifyOptions: VuetifyOptions,
+  rtlLocales = ['ar', 'he', 'fa', 'ur'],
 ) {
   vuetifyOptions.locale = {}
   const nuxtApp = useNuxtApp()
@@ -14,11 +23,16 @@ export function configureVuetifyI18nAdapter(
   const fallback = i18n.fallbackLocale
   const messages = i18n.messages
   const currentLocale = ref<Locale>(current.value)
+  const locales: Locale[] | LocaleObject[] = i18n.locales.value
 
-  vuetifyOptions.locale.rtl = i18n.locales.value.reduce((acc: Record<string, boolean>, locale: any) => {
-    acc[locale.code] = locale.dir === 'rtl'
+  vuetifyOptions.locale.rtl = locales.reduce((acc, locale) => {
+    if (typeof locale === 'string')
+      acc[locale] = rtlLocales.includes(locale)
+    else
+      acc[locale.code] = locale.dir === 'rtl'
+
     return acc
-  }, {})
+  }, {} as Record<string, boolean>)
 
   watch(currentLocale, (val, oldVal) => {
     if (oldVal)
