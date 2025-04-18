@@ -46,6 +46,6 @@ jobs:
       - name: 💪 Type check
         run: pnpm test:typecheck
 
-      - name: 🛠️ Check types
+      - name: 🛠️ Test attw
         if: runner.os != 'windows-latest'
         run: pnpm test:attw

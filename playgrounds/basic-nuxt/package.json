@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "prepare": "nuxt prepare",
-    "xtest:typecheck": "nuxt prepare && nuxt typecheck"
+    "test:typecheck": "TYPECHECK=true nuxt prepare && TYPECHECK=true nuxt typecheck"
   },
   "dependencies": {
     "@mdi/font": "catalog:",
