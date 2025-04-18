@@ -1,9 +1,8 @@
 import type { Ref } from 'vue'
 import type { Locale } from 'vue-i18n'
 import type { LocaleInstance, LocaleMessages, LocaleOptions, VuetifyOptions } from 'vuetify'
-import { useNuxtApp } from '#imports'
+import { useI18n, useNuxtApp } from '#imports'
 import { ref, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 export function configureVuetifyAdapter(
   vuetifyOptions: VuetifyOptions,
