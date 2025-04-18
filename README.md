@@ -7,7 +7,7 @@
   </picture>
 </p>
 
-<h1 align="center">@unvuetify</h1>
+<h1 align="center">@unvuetifyXX</h1>
 
 <p align="center">
 Unified Vuetify utilities for Vite and Nuxt.
