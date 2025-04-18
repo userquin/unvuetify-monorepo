@@ -1,5 +1,6 @@
 declare module '#imports' {
   import type { NuxtApp } from '@nuxt/schema'
+  import type { ModuleRuntimeHooks } from '@nuxtjs/i18n'
   import type { Locale, LocaleObject, UseI18nOptions } from 'vue-i18n'
   import { useI18n } from 'vue-i18n'
 
@@ -12,7 +13,11 @@ declare module '#imports' {
     fallbackLocale?: Ref<Locale>
   }
 
-  declare function useNuxtApp(): NuxtApp & { $i18n: I18n }
+  declare function useNuxtApp(): NuxtApp & {
+    $i18n: I18n
+  } & {
+    hook: <H extends keyof ModuleRuntimeHooks>(hook: H, callback: ModuleRuntimeHooks[H]) => void
+  }
 
   export { useI18n, useNuxtApp }
 }

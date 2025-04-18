@@ -8,7 +8,8 @@ export function configureVuetifyAdapter(
   vuetifyOptions: VuetifyOptions,
 ) {
   vuetifyOptions.locale = {}
-  const i18n = useNuxtApp().$i18n
+  const nuxtApp = useNuxtApp()
+  const i18n = nuxtApp.$i18n
   const current = i18n.locale
   const fallback = i18n.fallbackLocale
   const messages = i18n.messages
@@ -24,13 +25,12 @@ export function configureVuetifyAdapter(
       i18n.setLocale(val)
   }, { immediate: true, flush: 'post' })
 
-  // @ts-expect-error i18n missing
   nuxtApp.hook('i18n:localeSwitched', ({ newLocale }) => {
     currentLocale.value = newLocale
   })
 
   vuetifyOptions.locale.adapter = {
-    name: 'nuxt-vue-i18n',
+    name: '@unvuetify:nuxt-i18n-utils:adapter',
     current: currentLocale,
     fallback,
     messages,
@@ -68,7 +68,7 @@ function createProvideFunction(data: {
     const n = wrapI18n(i18n.n)
 
     return <LocaleInstance>{
-      name: 'nuxt-vue-i18n',
+      name: '@unvuetify:nuxt-i18n-utils:adapter',
       current: currentLocale,
       fallback: data.fallback,
       messages: data.messages,
