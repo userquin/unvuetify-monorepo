@@ -44,7 +44,7 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
             >
               <template #title>
                 <h2 class="text-h5 font-weight-bold">
-                  Vuetify Auto-Import with Resolvers
+                  Nuxt Auto-Import with Prefixes
                 </h2>
               </template>
             </vuetify-card>

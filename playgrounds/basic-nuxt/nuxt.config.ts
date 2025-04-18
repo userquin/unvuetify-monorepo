@@ -1,6 +1,9 @@
+import process from 'node:process'
 import { createResolver } from '@nuxt/kit'
 
 const resolver = createResolver(import.meta.url)
+
+const SUFFIX = process.env.TYPECHECK === 'true' ? '/dist' : '/src/index'
 
 const r = (path: string) => resolver.resolve(path)
 
@@ -26,10 +29,10 @@ export default defineNuxtConfig({
     'vuetify/styles',
   ],
   alias: {
-    '@unvuetify/nuxt-utils': r('../../packages/nuxt-utils/src/index'),
-    '@unvuetify/shared': r('../../packages/shared/src/index'),
-    '@unvuetify/vite-styles-plugin': r('../../packages/styles-plugin/src/index'),
-    '@unvuetify/unimport-presets': r('../../packages/unimport-presets/src/index'),
+    '@unvuetify/nuxt-utils': r(`../../packages/nuxt-utils${SUFFIX}`),
+    '@unvuetify/shared': r(`../../packages/shared${SUFFIX}`),
+    '@unvuetify/vite-styles-plugin': r(`../../packages/styles-plugin${SUFFIX}`),
+    '@unvuetify/unimport-presets': r(`../../packages/unimport-presets${SUFFIX}`),
   },
   modules: ['@nuxt/fonts'],
 
