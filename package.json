@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@10.8.1",
-  "description": "Unified Vuetify utilities",
+  "description": "Unified Vuetify utilities for Vite and Nuxt",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/userquin/unvuetify#readme",
