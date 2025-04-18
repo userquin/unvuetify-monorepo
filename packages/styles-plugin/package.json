@@ -36,7 +36,7 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "local:tgz": "pnpm pack",
+    "test:typecheck": "tsc --noEmit",
     "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
   },
   "peerDependencies": {
