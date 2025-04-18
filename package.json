@@ -20,9 +20,9 @@
     "lint:fix": "nr lint --fix",
     "build": "pnpm -r --filter=\"./packages/**/\" run build",
     "stub": "pnpm -r --filter=\"./packages/**/\" run stub",
-    "typecheck": "tsc --noEmit",
     "release": "bumpp -r --excute=\"pnpm i\"",
     "local:tgz": "pnpm -r --parallel --filter=\"./packages/**/\" run local:tgz",
+    "test:typecheck": "tsc --noEmit",
     "test:attw": "pnpm -r --parallel --filter=\"./packages/**/\" test:attw",
     "prepare-stackblitz-script": "tsx ./scripts/prepare-stackblitz-script.ts"
   },

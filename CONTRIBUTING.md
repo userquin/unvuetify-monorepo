@@ -12,7 +12,7 @@ To develop and test any `@unvuetify/monorepo` package:
 
 1. Fork the `@unvuetify/monorepo` repository to your own GitHub account and then clone it to your local device.
 
-2. `@unvuetify/monorepo` uses pnpm v10. If you are working on multiple projects with different versions of pnpm, it's recommend to enable [Corepack](https://github.com/nodejs/corepack) by running `corepack enable`.
+2. `@unvuetify/monorepo` uses pnpm v10 and Node 22. If you are working on multiple projects with different versions of pnpm, it's recommended to enable [Corepack](https://github.com/nodejs/corepack) by running `npm i -g corepack@latest && corepack enable`.
 
 3. Check out a branch where you can work and commit your changes:
 ```shell
@@ -22,3 +22,26 @@ git checkout -b my-new-branch
 5. Run `pnpm install` in `@unvuetify/monorepo`'s root folder
 
 6. Run `nr stub` in `@unvuetify/monorepo`'s root folder.
+
+7. WIP: run the tests
+
+8. Run the fix lint and typecheck scripts: `pnpm lint:fix` and `pnpm test:typecheck`.
+
+9. Commit and push your changes to your fork using conventional commits. Then, create a pull request to the `main` branch of the `@unvuetify` repository:
+
+```shell
+git add .
+git commit -m "feat: my new feature"
+git push origin my-new-branch-or-feature
+```
+
+## CI errors
+
+Sometimes when you push your changes to create a new pull request (PR), the CI can fail, but we cannot check the logs to see what went wrong.
+
+If you are getting the **Semantic Pull Request** error, please check the [Semantic Pull Request](https://www.conventionalcommits.org/en/v1.0.0/#summary) documentation.
+
+You can run the following commands in your local environment to fix CI errors:
+
+- `pnpm lint` to lint the code changes
+- `pnpm test:typecheck` to run TypeScript checks run on CI

@@ -1,0 +1,21 @@
+name: Semantic Pull Request
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  main:
+    if: github.repository == 'userquin/unvuetify-monorepo'
+    permissions:
+      pull-requests: read
+    runs-on: ubuntu-latest
+    name: Semantic Pull Request
+    steps:
+      - name: Validate PR title
+        uses: amannn/action-semantic-pull-request@0723387faaf9b38adef4775cd42cfd5155ed6017 # v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
