@@ -12,7 +12,7 @@ To develop and test any `@unvuetify/monorepo` package:
 
 1. Fork the `@unvuetify/monorepo` repository to your own GitHub account and then clone it to your local device.
 
-2. `@unvuetify/monorepo` uses pnpm v10 and Node 22. If you are working on multiple projects with different versions of pnpm, it's recommend to enable [Corepack](https://github.com/nodejs/corepack) by running `npm i -g corepack@latest && corepack enable`.
+2. `@unvuetify/monorepo` uses pnpm v10 and Node 22. If you are working on multiple projects with different versions of pnpm, it's recommended to enable [Corepack](https://github.com/nodejs/corepack) by running `npm i -g corepack@latest && corepack enable`.
 
 3. Check out a branch where you can work and commit your changes:
 ```shell
