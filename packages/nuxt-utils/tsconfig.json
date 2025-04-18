@@ -1,3 +1,8 @@
 {
-  "extends": "../../tsconfig.json"
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "@nuxtjs/i18n",
+    ]
+  },
 }
