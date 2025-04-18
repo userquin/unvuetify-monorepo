@@ -1,4 +1,3 @@
-import type { NuxtApp } from '@nuxt/schema'
 import type { Ref } from 'vue'
 import type { Locale } from 'vue-i18n'
 import type { LocaleInstance, LocaleMessages, LocaleOptions, VuetifyOptions } from 'vuetify'
@@ -7,7 +6,6 @@ import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export function configureVuetifyAdapter(
-  nuxtApp: NuxtApp,
   vuetifyOptions: VuetifyOptions,
 ) {
   vuetifyOptions.locale = {}
