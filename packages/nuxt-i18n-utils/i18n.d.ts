@@ -1,7 +1,9 @@
 declare module '#imports' {
   import type { NuxtApp } from '@nuxt/schema'
   import type { LocaleObject, ModuleRuntimeHooks } from '@nuxtjs/i18n'
+  import type { Ref } from 'vue'
   import type { Locale, UseI18nOptions } from 'vue-i18n'
+  import { ref, watch } from 'vue'
   import { useI18n } from 'vue-i18n'
 
   type Composer = typeof useI18n<UseI18nOptions>
@@ -19,5 +21,7 @@ declare module '#imports' {
     hook: <H extends keyof ModuleRuntimeHooks>(hook: H, callback: ModuleRuntimeHooks[H]) => void
   }
 
+  export type { Ref }
+  export { ref, watch }
   export { useI18n, useNuxtApp }
 }

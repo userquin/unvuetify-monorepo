@@ -10,7 +10,7 @@
 <h1 align="center">@unvuetify/nuxt-i18n-utils</h1>
 
 <p align="center">
-Nuxt 3 I18n runtime utilities.
+Nuxt 3 I18n utilities.
 </p>
 
 <p align='center'>

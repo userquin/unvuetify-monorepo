@@ -3,6 +3,7 @@ import { defineBuildConfig } from 'unbuild'
 export default defineBuildConfig({
   entries: [
     'src/index',
+    'src/runtime/index',
   ],
   externals: [
     '@nuxt/schema',
@@ -12,6 +13,7 @@ export default defineBuildConfig({
     '@vue/shared',
     '@vue/reactivity',
     '#imports',
+    'defu',
     'vue',
     'vuetify',
     'vue-i18n',

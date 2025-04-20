@@ -1,22 +1,42 @@
+import type { Ref } from '#imports'
 import type { LocaleObject } from '@nuxtjs/i18n'
-import type { Ref } from 'vue'
 import type { Locale } from 'vue-i18n'
 import type { LocaleInstance, LocaleMessages, LocaleOptions, VuetifyOptions } from 'vuetify'
-import { useI18n, useNuxtApp } from '#imports'
-import { ref, watch } from 'vue'
+import { ref, useI18n, useNuxtApp, watch } from '#imports'
+
+export interface VuetifyI18nAdapterOptions {
+  /**
+   * Whether to override the default entries from Vuetify options:
+   * - locale
+   * - fallback
+   * - messages
+   *
+   * If any of the previous entries are not set, they will be configured with the values from i18n.
+   *
+   * @default false
+   */
+  override?: boolean
+  /**
+   * Default locales list `rtl` used when using `@nuxtjs/i18n` locales without object notation.
+   *
+   * @default ['ar', 'he', 'fa', 'ur']
+   */
+  rtlLocales?: string[]
+}
 
 /**
  * Configure Vuetify i18n adapter.
  * @param vuetifyOptions The vuetify options.
- * @param rtlLocales Default locales list `rtl` used when using `@nuxtjs/i18n` locales without object notation.
+ * @param options The options to configure the i18n adapter.
  *
  * @see https://vuetifyjs.com/en/features/internationalization
  */
 export function configureVuetifyI18nAdapter(
   vuetifyOptions: VuetifyOptions,
-  rtlLocales = ['ar', 'he', 'fa', 'ur'],
+  options: VuetifyI18nAdapterOptions = {},
 ) {
-  vuetifyOptions.locale = {}
+  const { rtlLocales = ['ar', 'he', 'fa', 'ur'], override } = options
+  vuetifyOptions.locale ??= {}
   const nuxtApp = useNuxtApp()
   const i18n = nuxtApp.$i18n
   const current = i18n.locale
@@ -24,6 +44,16 @@ export function configureVuetifyI18nAdapter(
   const messages = i18n.messages
   const currentLocale = ref<Locale>(current.value)
   const locales: Locale[] | LocaleObject[] = i18n.locales.value
+
+  if (!vuetifyOptions.locale.locale || override) {
+    vuetifyOptions.locale.locale = current.value
+  }
+  if (!vuetifyOptions.locale.fallback || override) {
+    vuetifyOptions.locale.fallback = fallback.value
+  }
+  if (!vuetifyOptions.locale.messages || override) {
+    vuetifyOptions.locale.messages = messages.value
+  }
 
   vuetifyOptions.locale.rtl = locales.reduce((acc, locale) => {
     if (typeof locale === 'string')
