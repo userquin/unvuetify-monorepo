@@ -1,7 +1,7 @@
 {
   "name": "nuxt-i18n-v9",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

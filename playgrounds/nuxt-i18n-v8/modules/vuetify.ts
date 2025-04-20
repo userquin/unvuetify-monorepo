@@ -1,7 +1,7 @@
 import type { VuetifyNuxtOptions } from '@unvuetify/nuxt-utils'
 import { defineNuxtModule } from '@nuxt/kit'
-import { configureVuetify } from '@unvuetify/nuxt-utils'
 import { configureI18n } from '@unvuetify/nuxt-i18n-utils'
+import { configureVuetify } from '@unvuetify/nuxt-utils'
 
 export interface ModuleOptions extends VuetifyNuxtOptions {
 }
