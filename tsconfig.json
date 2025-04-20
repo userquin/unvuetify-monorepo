@@ -6,6 +6,9 @@
     "module": "preserve",
     "moduleResolution": "Bundler",
     "paths": {
+      "@unvuetify/nuxt-i18n-utils/runtime": [
+        "./packages/nuxt-i18n-utils/src/runtime/"
+      ],
       "@unvuetify/nuxt-i18n-utils": [
         "./packages/nuxt-i18n-utils/src/"
       ],

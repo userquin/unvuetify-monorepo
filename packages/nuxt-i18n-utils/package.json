@@ -35,7 +35,7 @@
   "typesVersions": {
     "*": {
       "runtime": [
-        "./dist/runtime/index.d.mts"
+        "dist/runtime/index.d.mts"
       ]
     }
   },
@@ -49,10 +49,8 @@
     "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
   },
   "peerDependencies": {
+    "@nuxt/schema": ">=3.9.0",
     "@nuxtjs/i18n": "^8.0.0 || ^9.0.0 || ^10.0.0-0",
     "vuetify": "^3.0.0"
-  },
-  "devDependencies": {
-    "@nuxt/schema": "catalog:"
   }
 }

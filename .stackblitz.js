@@ -43,6 +43,21 @@ const pnpmCatalogs = {
   'vue-tsc': '^2.2.8',
   'vuetify': '^3.8.1',
 }
+/** @type {Record<string, Record<string, string>>} */
+const namedPnpmCatalogs = {
+  'i18n-v8': {
+    '@nuxt/kit': '3.15.4',
+    '@nuxt/schema': '3.15.4',
+    '@nuxtjs/i18n': '8.5.6',
+    'nuxt': '3.15.4',
+  },
+  'i18n-v9': {
+    '@nuxt/kit': '^3.16.2',
+    '@nuxt/schema': '^3.16.2',
+    '@nuxtjs/i18n': '^9.5.3',
+    'nuxt': '^3.16.2',
+  },
+}
 
 /** @param path {string} */
 async function disableNuxtFonts(path) {
@@ -77,7 +92,18 @@ async function replaceDependencies(path) {
         /** @type {Record<string, string>} */
         entry,
       )).reduce((acc, [key, value]) => {
-        acc[key] = value === 'catalog:' ? pnpmCatalogs[key] || value : value
+        if (value.startsWith('catalog:')) {
+          const useCatalog = value.slice('catalog:'.length).trim()
+          if (useCatalog.length === 0 || useCatalog === 'default') {
+            acc[key] = pnpmCatalogs[key] || value
+          }
+          else {
+            acc[key] = namedPnpmCatalogs[useCatalog]?.[key] || value
+          }
+        }
+        else {
+          acc[key] = value
+        }
         return acc
       }, {})
     }

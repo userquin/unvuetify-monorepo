@@ -3,6 +3,7 @@ import defu from 'defu'
 
 export function configureI18n(nuxt: Nuxt) {
   nuxt.options.build.transpile.push('@unvuetify/nuxt-i18n-utils/runtime')
+  nuxt.options.build.transpile.push(/@unvuetify[\\/]nuxt-i18n-utils[\\/]dist[\\/]runtime[\\/]index\.mjs$/)
   nuxt.hook('vite:extendConfig', (viteInlineConfig) => {
     viteInlineConfig.optimizeDeps = defu(viteInlineConfig.optimizeDeps, {
       exclude: ['@unvuetify/nuxt-i18n-utils/runtime'],
@@ -17,6 +18,7 @@ export function configureI18n(nuxt: Nuxt) {
             : []
         ),
         '@unvuetify/nuxt-i18n-utils/runtime',
+        /@unvuetify[\\/]nuxt-i18n-utils[\\/]dist[\\/]runtime[\\/]index\.mjs$/,
       ]
     }
   })

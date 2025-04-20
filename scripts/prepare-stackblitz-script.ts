@@ -24,6 +24,12 @@ async function createStackblitzScript() {
       .replace(/"/g, '\'')
       // add trailing comma in the last dependency entry
       .replace(/'\s+\}/, '\',\n}')
+  const namedDependencies
+    = JSON
+      .stringify(yaml.catalogs ?? {}, null, 2)
+      .replace(/"/g, '\'')
+      // add trailing comma in the last named dependency entry
+      .replace(/'\s+\}/, '\',\n}')
 
   const sbScript = `import fsPromises from 'node:fs/promises'
 import { resolve } from 'node:path'
@@ -38,6 +44,8 @@ updateProjectStructure()
 
 /** @type {Record<string, string>} */
 const pnpmCatalogs = ${dependencies}
+/** @type {Record<string, Record<string, string>>} */
+const namedPnpmCatalogs = ${namedDependencies}
 
 /** @param path {string} */
 async function disableNuxtFonts(path) {
@@ -72,7 +80,18 @@ async function replaceDependencies(path) {
         /** @type {Record<string, string>} */
         entry,
       )).reduce((acc, [key, value]) => {
-        acc[key] = value === 'catalog:' ? pnpmCatalogs[key] || value : value
+        if (value.startsWith('catalog:')) {
+          const useCatalog = value.slice('catalog:'.length).trim()
+          if (useCatalog.length === 0 || useCatalog === 'default') {
+            acc[key] = pnpmCatalogs[key] || value
+          }
+          else {
+            acc[key] = namedPnpmCatalogs[useCatalog]?.[key] || value
+          }
+        }
+        else {
+          acc[key] = value
+        }
         return acc
       }, {})
     }
@@ -121,6 +140,8 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/prefix-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n-v8/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n-v9/package.json')),
     // disable nuxt fonts module
     disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
     disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),

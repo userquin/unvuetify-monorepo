@@ -1,31 +1,31 @@
 {
-  "name": "prefix-nuxt",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "nuxt-i18n-v8",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "prepare": "nuxt prepare",
+    "postinstall": "nuxt prepare",
     "test:typecheck": "TYPECHECK=true nuxt prepare && TYPECHECK=true nuxt typecheck"
   },
   "dependencies": {
     "@mdi/font": "catalog:",
-    "@nuxt/kit": "catalog:",
-    "nuxt": "catalog:",
-    "unhead": "catalog:",
+    "@nuxt/kit": "catalog:i18n-v8",
+    "@nuxt/schema": "catalog:i18n-v8",
+    "@nuxtjs/i18n": "catalog:i18n-v8",
+    "nuxt": "catalog:i18n-v8",
+    "unhead": "catalog:i18n-v8",
     "vue": "catalog:",
     "vuetify": "catalog:"
   },
   "devDependencies": {
-    "@nuxt/fonts": "catalog:",
-    "@unvuetify/nuxt-utils": "workspace:*",
+    "@intlify/unplugin-vue-i18n": "catalog:i18n-v8",
+    "@unvuetify/nuxt-i18n-utils": "link:/../../packages/nuxt-i18n-utils",
+    "@unvuetify/nuxt-utils": "link:/../../packages/nuxt-utils",
     "sass-embedded": "catalog:",
     "typescript": "catalog:",
-    "unimport": "catalog:",
-    "vite": "catalog:",
     "vue-tsc": "catalog:"
   }
 }

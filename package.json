@@ -31,11 +31,10 @@
     "@antfu/eslint-config": "catalog:",
     "@antfu/ni": "catalog:",
     "@arethetypeswrong/cli": "catalog:",
-    "@nuxt/module-builder": "catalog:",
-    "@nuxtjs/i18n": "catalog:i18n-v9",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
+    "nuxt": "catalog:",
     "pathe": "catalog:",
     "read-yaml-file": "catalog:",
     "taze": "catalog:",
@@ -50,8 +49,6 @@
     "vuetify": "catalog:"
   },
   "resolutions": {
-    "nuxt": "catalog:",
-    "vite": "catalog:",
     "vuetify": "catalog:"
   },
   "stackblitz": {

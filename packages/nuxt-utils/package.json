@@ -40,12 +40,12 @@
     "test:typecheck": "tsc --noEmit",
     "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
   },
+  "peerDependencies": {
+    "@nuxt/schema": ">=3.9.0"
+  },
   "dependencies": {
     "@unvuetify/shared": "workspace:*",
     "@unvuetify/unimport-presets": "workspace:*",
     "@unvuetify/vite-styles-plugin": "workspace:*"
-  },
-  "devDependencies": {
-    "@nuxt/schema": "catalog:"
   }
 }
