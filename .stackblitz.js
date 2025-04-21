@@ -16,6 +16,7 @@ const pnpmCatalogs = {
   '@arethetypeswrong/cli': '^0.17.4',
   '@mdi/font': '7.4.47',
   '@nuxt/fonts': '^0.11.1',
+  '@nuxt/kit': '3.16.2',
   '@nuxt/module-builder': '^1.0.1',
   '@nuxt/schema': '^3.16.2',
   '@tsconfig/node22': '^22.0.0',
@@ -32,6 +33,7 @@ const pnpmCatalogs = {
   'tsx': '^4.19.3',
   'typescript': '~5.8.3',
   'unbuild': '^3.5.0',
+  'unhead': '2.0.8',
   'unimport': '^5.0.0',
   'unplugin-auto-import': '^19.1.2',
   'unplugin-fonts': '^1.3.1',
@@ -45,17 +47,29 @@ const pnpmCatalogs = {
 }
 /** @type {Record<string, Record<string, string>>} */
 const namedPnpmCatalogs = {
+  'i18n-v10': {
+    '@intlify/unplugin-vue-i18n': '6.0.5',
+    '@nuxt/kit': '3.16.2',
+    '@nuxt/schema': '3.16.2',
+    '@nuxtjs/i18n': '^10.0.0-beta.2',
+    'nuxt': '3.16.2',
+    'unhead': '2.0.8',
+  },
   'i18n-v8': {
+    '@intlify/unplugin-vue-i18n': '3.0.1',
     '@nuxt/kit': '3.15.4',
     '@nuxt/schema': '3.15.4',
     '@nuxtjs/i18n': '8.5.6',
     'nuxt': '3.15.4',
+    'unhead': '1.11.20',
   },
   'i18n-v9': {
-    '@nuxt/kit': '^3.16.2',
-    '@nuxt/schema': '^3.16.2',
-    '@nuxtjs/i18n': '^9.5.3',
-    'nuxt': '^3.16.2',
+    '@intlify/unplugin-vue-i18n': '6.0.5',
+    '@nuxt/kit': '3.16.2',
+    '@nuxt/schema': '3.16.2',
+    '@nuxtjs/i18n': '9.5.3',
+    'nuxt': '3.16.2',
+    'unhead': '2.0.8',
   },
 }
 
@@ -152,6 +166,8 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/prefix-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n-v8/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n-v9/package.json')),
     // disable nuxt fonts module
     disableNuxtFonts(resolve('./playgrounds/basic-nuxt/nuxt.config.ts')),
     disableNuxtFonts(resolve('./playgrounds/prefix-nuxt/nuxt.config.ts')),

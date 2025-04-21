@@ -29,7 +29,7 @@ async function createStackblitzScript() {
       .stringify(yaml.catalogs ?? {}, null, 2)
       .replace(/"/g, '\'')
       // add trailing comma in the last named dependency entry
-      .replace(/'\s+\}/, '\',\n}')
+      .replace(/'\s+\},?/g, '\',\n  },')
 
   const sbScript = `import fsPromises from 'node:fs/promises'
 import { resolve } from 'node:path'
