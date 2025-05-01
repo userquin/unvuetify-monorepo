@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/unimport-presets",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vuetify unimport presets for composables and directives",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
