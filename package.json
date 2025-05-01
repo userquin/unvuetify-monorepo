@@ -7,13 +7,13 @@
   "description": "Unified Vuetify utilities for Vite and Nuxt",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/userquin/unvuetify#readme",
+  "homepage": "https://github.com/userquin/unvuetify-monorepo#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/userquin/unvuetify.git"
+    "url": "git+https://github.com/userquin/unvuetify-monorepo.git"
   },
   "bugs": {
-    "url": "https://github.com/userquin/unvuetify/issues"
+    "url": "https://github.com/userquin/unvuetify-monorepo/issues"
   },
   "scripts": {
     "lint": "eslint .",
