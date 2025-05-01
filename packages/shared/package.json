@@ -5,14 +5,14 @@
   "description": "Shared utilities for Vuetify components and directives",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/userquin/unvuetify#readme",
+  "homepage": "https://github.com/userquin/unvuetify-monorepo#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/userquin/unvuetify.git",
+    "url": "git+https://github.com/userquin/unvuetify-monorepo.git",
     "directory": "packages/shared"
   },
   "bugs": {
-    "url": "https://github.com/userquin/unvuetify/issues"
+    "url": "https://github.com/userquin/unvuetify-monorepo/issues"
   },
   "keywords": [
     "vuetify",
