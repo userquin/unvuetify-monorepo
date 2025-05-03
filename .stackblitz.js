@@ -24,7 +24,7 @@ const pnpmCatalogs = {
   '@vue/tsconfig': '^0.7.0',
   'bumpp': '^10.1.0',
   'eslint': '^9.24.0',
-  'nuxt': '3.16.2',
+  'nuxt': '3.17.1',
   'pathe': '^2.0.3',
   'read-yaml-file': '^2.1.0',
   'sass-embedded': '^1.86.3',
@@ -91,8 +91,7 @@ async function updateProjectStructure() {
   const packageJson = JSON.parse(await fsPromises.readFile(root, { encoding: 'utf-8' }))
   packageJson.pnpm = {
     patchedDependencies: {
-      'nuxt@3.16.2': 'patches/nuxt@3.16.2.patch',
-      'unimport@4.2.0': 'patches/unimport@4.2.0.patch',
+      'unimport@5.0.0': 'patches/unimport@5.0.0.patch',
     },
     overrides: {
       'sass-embedded': 'npm:sass@1.86.3',
