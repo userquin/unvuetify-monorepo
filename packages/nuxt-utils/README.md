@@ -90,6 +90,22 @@ export default defineNuxtConfig({
 })
 ```
 
+and finally, you also need to add a Nuxt plugin to register the Vuetify plugin:
+
+```ts
+// plugins/vuetify.ts
+import { createVuetify } from 'vuetify'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  const vuetify = createVuetify({
+    theme: {
+      defaultTheme: 'dark',
+    },
+  })
+  nuxtApp.vueApp.use(vuetify)
+})
+```
+
 Check the `nuxt` playgrounds:
 - [basic-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-nuxt)
 - [prefix-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-nuxt)
