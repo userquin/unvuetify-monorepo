@@ -86,8 +86,7 @@ async function updateProjectStructure() {
   const packageJson = JSON.parse(await fsPromises.readFile(root, { encoding: 'utf-8' }))
   packageJson.pnpm = {
     patchedDependencies: {
-      'nuxt@3.16.2': 'patches/nuxt@3.16.2.patch',
-      'unimport@4.2.0': 'patches/unimport@4.2.0.patch',
+      'unimport@5.0.0': 'patches/unimport@5.0.0.patch',
     },
     overrides: {
       'sass-embedded': 'npm:sass@1.86.3',

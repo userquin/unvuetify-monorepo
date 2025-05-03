@@ -2,10 +2,6 @@ packages:
   - packages/**
   - playgrounds/**
 
-patchedDependencies:
-  nuxt@3.16.2: patches/nuxt@3.16.2.patch
-  unimport@4.2.0: patches/unimport@4.2.0.patch
-
 catalog:
   '@antfu/eslint-config': ^4.12.0
   '@antfu/ni': ^24.3.0
@@ -20,7 +16,7 @@ catalog:
   '@vue/tsconfig': ^0.7.0
   bumpp: ^10.1.0
   eslint: ^9.24.0
-  nuxt: 3.16.2
+  nuxt: 3.17.1
   pathe: ^2.0.3
   read-yaml-file: ^2.1.0
   sass-embedded: ^1.86.3
@@ -38,3 +34,6 @@ catalog:
   vue: ^3.5.13
   vue-tsc: ^2.2.8
   vuetify: ^3.8.1
+
+patchedDependencies:
+  unimport@5.0.0: patches/unimport@5.0.0.patch
