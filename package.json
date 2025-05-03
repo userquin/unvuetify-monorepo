@@ -22,7 +22,7 @@
     "stub": "pnpm -r --filter=\"./packages/**/\" run stub",
     "release": "bumpp -r --excute=\"pnpm i\"",
     "test:packages:typecheck": "pnpm -r --parallel --filter=\"./packages/**/\" test:typecheck",
-    "test:playgrounds:typecheck": "pnpm -r --parallel --filter=\"./playgrounds/**/\" test:typecheck",
+    "test:playgrounds:typecheck": "pnpm -r --parallel --filter=\"./playgrounds/**/\" test:typecheck && pnpm -C playgrounds/nuxt-i18n-v8 run test:typecheck",
     "test:typecheck": "nr test:packages:typecheck && nr test:playgrounds:typecheck",
     "test:attw": "pnpm -r --parallel --filter=\"./packages/**/\" test:attw",
     "prepare-stackblitz-script": "tsx ./scripts/prepare-stackblitz-script.ts"
@@ -34,7 +34,6 @@
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
-    "nuxt": "catalog:",
     "pathe": "catalog:",
     "read-yaml-file": "catalog:",
     "taze": "catalog:",

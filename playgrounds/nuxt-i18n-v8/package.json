@@ -1,6 +1,7 @@
 {
   "name": "nuxt-i18n-v8",
   "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -12,18 +13,24 @@
   },
   "dependencies": {
     "@mdi/font": "catalog:",
+    "unhead": "catalog:i18n-v8",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:i18n-v8",
+    "vuetify": "catalog:i18n-v8"
+  },
+  "devDependencies": {
+    "@intlify/core": "catalog:i18n-v8",
+    "@intlify/core-base": "catalog:i18n-v8",
+    "@intlify/message-compiler": "catalog:i18n-v8",
+    "@intlify/unplugin-vue-i18n": "catalog:i18n-v8",
+    "@nuxt/devtools": "catalog:i18n-v8",
     "@nuxt/kit": "catalog:i18n-v8",
     "@nuxt/schema": "catalog:i18n-v8",
     "@nuxtjs/i18n": "catalog:i18n-v8",
-    "nuxt": "catalog:i18n-v8",
-    "unhead": "catalog:i18n-v8",
-    "vue": "catalog:",
-    "vuetify": "catalog:"
-  },
-  "devDependencies": {
-    "@intlify/unplugin-vue-i18n": "catalog:i18n-v8",
     "@unvuetify/nuxt-i18n-utils": "link:/../../packages/nuxt-i18n-utils",
     "@unvuetify/nuxt-utils": "link:/../../packages/nuxt-utils",
+    "nitropack": "catalog:i18n-v8",
+    "nuxt": "catalog:i18n-v8",
     "sass-embedded": "catalog:",
     "typescript": "catalog:",
     "vue-tsc": "catalog:"

@@ -1,0 +1,47 @@
+catalog:
+  '@mdi/font': 7.4.47
+  '@nuxt/fonts': ^0.11.1
+  '@tsconfig/node22': ^22.0.0
+  '@types/node': ^22.14.1
+  '@vitejs/plugin-vue': ^5.2.3
+  '@vue/tsconfig': ^0.7.0
+  sass-embedded: ^1.86.3
+  typescript: ~5.8.3
+  unhead: 1.11.16
+  vue: ^3.5.13
+  vue-tsc: ^2.2.8
+  vuetify: 3.7.16
+
+catalogs:
+  i18n-v8:
+    '@intlify/core': 10.0.7
+    '@intlify/core-base': 10.0.7
+    '@intlify/message-compiler': 10.0.7
+    '@intlify/unplugin-vue-i18n': ^3.0.1
+    '@nuxt/devtools': 1.7.0
+    '@nuxt/kit': 3.15.4
+    '@nuxt/schema': 3.15.4
+    '@nuxtjs/i18n': 8.5.6
+    nitropack: 2.10.4
+    nuxt: 3.15.4
+    unhead: 1.11.18
+    vite: 6.0.1
+    vue-i18n: 10.0.7
+    vuetify: 3.7.16
+
+overrides:
+  '@intlify/core': 10.0.7
+  '@intlify/core-base': 10.0.7
+  '@intlify/message-compiler': 10.0.7
+  '@intlify/unplugin-vue-i18n': ^3.0.1
+  '@nuxt/devtools': 1.7.0
+  '@nuxt/kit': 3.15.4
+  '@nuxt/schema': 3.15.4
+  '@nuxtjs/i18n': 8.5.6
+  nitropack: 2.10.4
+  nuxt: 3.15.4
+  unhead: 1.11.18
+  vite: 6.0.1
+  vue-i18n: 10.0.7
+  vuetify: 3.7.16
+

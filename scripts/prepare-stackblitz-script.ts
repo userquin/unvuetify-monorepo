@@ -159,7 +159,6 @@ async function updateProjectStructure() {
     './pnpm-workspace.yaml',
     \`packages:
   - packages/**
-  - playgrounds/**
 \`,
     'utf-8',
   )

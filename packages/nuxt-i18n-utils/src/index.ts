@@ -1,5 +1,5 @@
 import type { Nuxt } from '@nuxt/schema'
-import defu from 'defu'
+import { defu } from 'defu'
 
 export function configureI18n(nuxt: Nuxt) {
   nuxt.options.build.transpile.push('@unvuetify/nuxt-i18n-utils/runtime')

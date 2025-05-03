@@ -48,10 +48,10 @@ You can run the following commands in your local environment to fix CI errors:
 
 ## Notes
 
-To run the playground you need to `stub`  the packages and the run the `dev` script:
+To run the playground you need to `stub` the packages and the run the `dev` script:
 - from root run `nr stub`
 - from the corresponding playground folder run `nr dev`
 
-To run the typecheck script, you need to build the packages first and then run the  typecheck script:
+To run the typecheck script, you need to build the packages first and then run the typecheck script:
 - from root run `nr build`
 - from the corresponding package folder run `nr test:typecheck`

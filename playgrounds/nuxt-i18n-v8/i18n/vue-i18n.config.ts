@@ -1,6 +1,6 @@
-import ar from './locales/ar'
-import en from './locales/en'
-import es from './locales/es'
+import ar from '../locales/ar'
+import en from '../locales/en'
+import es from '../locales/es'
 
 export default defineI18nConfig(() => {
   return {

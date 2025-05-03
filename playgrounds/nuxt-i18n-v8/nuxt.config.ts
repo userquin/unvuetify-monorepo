@@ -11,7 +11,7 @@ const r = (path: string) => resolver.resolve(path)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   future: {
     compatibilityVersion: 4,
@@ -46,6 +46,10 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    // langDir: 'locales',
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
     // if not using RTL, you can replace locales with codes only
     // locales: ['en', 'es', 'ar'],
     locales: [{
@@ -61,6 +65,6 @@ export default defineNuxtConfig({
     }],
     defaultLocale: 'en',
     strategy: 'no_prefix', // or 'prefix_except_default'
-    vueI18n: './i18n.config.ts',
+    vueI18n: './vue-i18n.config.ts',
   },
 })

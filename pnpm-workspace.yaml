@@ -1,9 +1,11 @@
 packages:
   - packages/**
+  - playgrounds/**
+  - '!playgrounds/nuxt-i18n-v8'
 
 patchedDependencies:
-  nuxt@3.16.2: patches/nuxt@3.16.2.patch
   unimport@4.2.0: patches/unimport@4.2.0.patch
+  unimport@5.0.0: patches/unimport@5.0.0.patch
 
 catalog:
   '@antfu/eslint-config': ^4.12.0
@@ -11,16 +13,16 @@ catalog:
   '@arethetypeswrong/cli': ^0.17.4
   '@mdi/font': 7.4.47
   '@nuxt/fonts': ^0.11.1
-  '@nuxt/kit': 3.16.2
+  '@nuxt/kit': 3.17.1
   '@nuxt/module-builder': ^1.0.1
-  '@nuxt/schema': ^3.16.2
+  '@nuxt/schema': 3.17.1
   '@tsconfig/node22': ^22.0.0
   '@types/node': ^22.14.1
   '@vitejs/plugin-vue': ^5.2.3
   '@vue/tsconfig': ^0.7.0
   bumpp: ^10.1.0
   eslint: ^9.24.0
-  nuxt: 3.16.2
+  nuxt: 3.17.1
   pathe: ^2.0.3
   read-yaml-file: ^2.1.0
   sass-embedded: ^1.86.3
@@ -38,27 +40,20 @@ catalog:
   vite-plugin-inspect: ^11.0.0
   vue: ^3.5.13
   vue-tsc: ^2.2.8
-  vuetify: ^3.8.1
+  vuetify: ^3.8.3
 
 catalogs:
   i18n-v10:
     '@intlify/unplugin-vue-i18n': 6.0.5
-    '@nuxt/kit': 3.16.2
-    '@nuxt/schema': 3.16.2
+    '@nuxt/kit': 3.17.1
+    '@nuxt/schema': 3.17.1
     '@nuxtjs/i18n': ^10.0.0-beta.2
-    nuxt: 3.16.2
+    nuxt: 3.17.1
     unhead: 2.0.8
-  i18n-v8:
-    '@intlify/unplugin-vue-i18n': 3.0.1
-    '@nuxt/kit': 3.15.4
-    '@nuxt/schema': 3.15.4
-    '@nuxtjs/i18n': 8.5.6
-    nuxt: 3.15.4
-    unhead: 1.11.20
   i18n-v9:
     '@intlify/unplugin-vue-i18n': 6.0.5
-    '@nuxt/kit': 3.16.2
-    '@nuxt/schema': 3.16.2
+    '@nuxt/kit': 3.17.1
+    '@nuxt/schema': 3.17.1
     '@nuxtjs/i18n': 9.5.3
-    nuxt: 3.16.2
+    nuxt: 3.17.1
     unhead: 2.0.8
