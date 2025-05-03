@@ -1,0 +1,56 @@
+{
+  "name": "@unvuetify/nuxt-i18n-utils",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "Nuxt I18n utilities for Vuetify",
+  "author": "userquin <userquin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/userquin/unvuetify-monorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userquin/unvuetify-monorepo.git",
+    "directory": "packages/nuxt-i18n-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/userquin/unvuetify-monorepo/issues"
+  },
+  "keywords": [
+    "i18n",
+    "nuxt-i18n",
+    "nuxt",
+    "nuxt 3",
+    "vuetify",
+    "vuetify 3",
+    "runtime"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./runtime": "./dist/runtime/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "typesVersions": {
+    "*": {
+      "runtime": [
+        "dist/runtime/index.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test:typecheck": "tsc --noEmit",
+    "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
+  },
+  "peerDependencies": {
+    "@nuxt/schema": ">=3.9.0",
+    "@nuxtjs/i18n": "^9.0.0 || ^10.0.0-0",
+    "vuetify": "^3.0.0"
+  }
+}
