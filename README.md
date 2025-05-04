@@ -80,10 +80,10 @@ Check the playgrounds for further details:
 ## 👀 Package features comparison
 
 > [!NOTE]
-> `unimport` requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/unimport%404.2.0.patch) to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4/v5` releases: check https://github.com/unjs/unimport/pull/447.
+> `unimport` requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/unimport%404.2.0.patch) to support prefixing Vuetify directives in Nuxt, fixed in `unimport v5.0.1` release: check https://github.com/unjs/unimport/pull/447.
 
 > [!NOTE]
-> Nuxt 3.16.2 requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/nuxt%403.16.2.patch) to support Vue Lazy Hydration, should be fixed in 3.17.0: check https://github.com/nuxt/nuxt/pull/31649.
+> Nuxt 3.16.2 requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/nuxt%403.16.2.patch) to support Vue Lazy Hydration, fixed in Nuxt 3.17.0: check https://github.com/nuxt/nuxt/pull/31649.
 
 Feature / Package | vite-plugin-vuetify | webpack-plugin-vuetify | styles[^1] | resolvers[^2] | presets[^3] | Nuxt[^4] |
 ----------------|---------------------|------------------------|-----------------------|---------------|-------------|----------
