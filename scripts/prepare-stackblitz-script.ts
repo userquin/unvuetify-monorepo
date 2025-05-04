@@ -1,14 +1,11 @@
+import type { PnpmWorkspaceYaml } from './types'
 import { lstat, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import process from 'node:process'
 import readYamlFile from 'read-yaml-file'
+import { prepareStackBlitzExampleScript } from './prepare-stackblitz-examples-scripts'
 
 createStackblitzScript()
-
-interface PnpmWorkspaceYaml {
-  catalog?: Record<string, string>
-  catalogs?: Record<string, Record<string, string>>
-}
 
 async function createStackblitzScript() {
   const rootDir = process.cwd()
@@ -143,4 +140,22 @@ async function updateProjectStructure() {
 }
 `
   await writeFile(script, sbScript, 'utf-8')
+
+  await Promise.all([
+    prepareStackBlitzExampleScript(rootDir, 'basic-nuxt', dependencies, {
+      nuxt: true,
+      overrideNuxtSettings: true,
+    }),
+    prepareStackBlitzExampleScript(rootDir, 'basic-resolvers', dependencies),
+    prepareStackBlitzExampleScript(rootDir, 'basic-unimport', dependencies),
+    prepareStackBlitzExampleScript(rootDir, 'nuxt-i18n', dependencies, {
+      nuxt: true,
+    }),
+    prepareStackBlitzExampleScript(rootDir, 'prefix-nuxt', dependencies, {
+      nuxt: true,
+      overrideNuxtSettings: true,
+    }),
+    prepareStackBlitzExampleScript(rootDir, 'prefix-resolvers', dependencies),
+    prepareStackBlitzExampleScript(rootDir, 'prefix-unimport', dependencies),
+  ])
 }
