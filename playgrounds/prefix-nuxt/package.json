@@ -25,5 +25,9 @@
     "unimport": "catalog:",
     "vite": "catalog:",
     "vue-tsc": "catalog:"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

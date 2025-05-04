@@ -64,19 +64,24 @@ There are a lot of packages/modules in this repository, our suggestion is to use
   - `@unvuetify/nuxt-utils` via Nuxt module using `configureVuetify` function
   - `@unvuetify/nuxt-i18n-utils` via Nuxt module using `configureI18n` function
 
-Check the playgrounds for further details:
-- [basic-nuxt](./playgrounds/basic-nuxt)
-- [basic-resolvers](./playgrounds/basic-resolvers)
-- [basic-unimport](./playgrounds/basic-unimport)
-- [prefix-nuxt](./playgrounds/prefix-nuxt)
-- [prefix-resolvers](./playgrounds/prefix-resolvers)
-- [prefix-unimport](./playgrounds/prefix-unimport)
-- [nuxt-i18n](./playgrounds/nuxt-i18n)
+## 📥 Playgrounds
 
 > [!WARNING]
 > `@nuxt/fonts` disabled and `settings.scss` files updated to run Nuxt playgrounds when running at StackBlitz.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
+You can open `@unvuetify` monorepo in Stackblitz: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
+
+or just play with individual playgrounds:
+
+| Example            | Source                                                                        | Playground |
+|--------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| `basic-nuxt`       | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-nuxt) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-nuxt) |
+| `basic-resolvers`  | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-resolvers) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-resolvers) |
+| `basic-unimport`   | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-unimport) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/basic-unimport) |
+| `nuxt-i18n`        | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/nuxt-i18n) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/nuxt-i18n) |
+| `prefix-nuxt`      | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-nuxt) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-nuxt) |
+| `prefix-resolvers` | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-resolvers) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-resolvers) |
+| `prefix-unimport`  | [GitHub](https://github.com/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-unimport) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/userquin/unvuetify-monorepo/blob/main/playgrounds/prefix-unimport) |
 
 ## 👀 Package features comparison
 
