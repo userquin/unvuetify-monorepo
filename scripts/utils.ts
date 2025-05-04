@@ -61,6 +61,7 @@ if (!SB)
 
 updateProjectStructure()
 
+const nuxt = ${JSON.stringify(customizations?.nuxt)}
 /** @type {Record<string, string>} */
 const extraDependencies = ${JSON.stringify(dependencies)}
 /** @type {Record<string, string>} */
@@ -116,6 +117,14 @@ async function updateProjectStructure() {
     overrides: {
       'sass-embedded': 'npm:sass@1.86.3',
     },
+  }
+  if (nuxt) {
+    packageJson.scripts['test:typecheck'] = 'pnpm typecheck'
+    const overrideNuxt = await fsPromises.lstat('./.sb-nuxt.config.ts').then(stat => stat.isFile()).catch(() => false)
+    if (overrideNuxt) {
+      await fsPromises.rm('./nuxt.config.ts', { force: true })
+      await fsPromises.rename('./.sb-nuxt.config.ts', './nuxt.config.ts')
+    }
   }
   replaceDependencies(packageJson)
   await fsPromises.writeFile(root, JSON.stringify(packageJson, null, 2), 'utf-8')

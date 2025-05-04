@@ -142,11 +142,21 @@ async function updateProjectStructure() {
   await writeFile(script, sbScript, 'utf-8')
 
   await Promise.all([
-    prepareStackBlitzExampleScript(rootDir, 'basic-nuxt', dependencies, { disableNuxtFonts: true, overrideNuxtSettings: true }),
+    prepareStackBlitzExampleScript(rootDir, 'basic-nuxt', dependencies, {
+      nuxt: true,
+      disableNuxtFonts: true,
+      overrideNuxtSettings: true,
+    }),
     prepareStackBlitzExampleScript(rootDir, 'basic-resolvers', dependencies),
     prepareStackBlitzExampleScript(rootDir, 'basic-unimport', dependencies),
-    prepareStackBlitzExampleScript(rootDir, 'nuxt-i18n', dependencies),
-    prepareStackBlitzExampleScript(rootDir, 'prefix-nuxt', dependencies, { disableNuxtFonts: true, overrideNuxtSettings: true }),
+    prepareStackBlitzExampleScript(rootDir, 'nuxt-i18n', dependencies, {
+      nuxt: true,
+    }),
+    prepareStackBlitzExampleScript(rootDir, 'prefix-nuxt', dependencies, {
+      nuxt: true,
+      disableNuxtFonts: true,
+      overrideNuxtSettings: true,
+    }),
     prepareStackBlitzExampleScript(rootDir, 'prefix-resolvers', dependencies),
     prepareStackBlitzExampleScript(rootDir, 'prefix-unimport', dependencies),
   ])
