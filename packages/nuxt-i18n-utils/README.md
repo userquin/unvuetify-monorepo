@@ -7,24 +7,21 @@
   </picture>
 </p>
 
-<h1 align="center">@unvuetify/nuxt-utils</h1>
+<h1 align="center">@unvuetify/nuxt-i18n-utils</h1>
 
 <p align="center">
-Nuxt 3 utilities for Vuetify.
+Nuxt I18n utilities.
 </p>
 
 <p align='center'>
-<a href='https://www.npmjs.com/package/@unvuetify/nuxt-utils' target="__blank">
-  <img src='https://img.shields.io/npm/v/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
+<a href='https://www.npmjs.com/package/@unvuetify/nuxt-i18n-utils' target="__blank">
+  <img src='https://img.shields.io/npm/v/@unvuetify/nuxt-i18n-utils.svg?style=flat&colorA=18181B&colorB=1867C0' alt="NPM version">
 </a>
-<a href="https://npm.chart.dev/@unvuetify/nuxt-utils" target="__blank">
-  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
+<a href="https://npm.chart.dev/@unvuetify/nuxt-i18n-utils" target="__blank">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@unvuetify/nuxt-i18n-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 <a href="https://github.com/userquin/unvuetify-monorepo/tree/main/LICENSE" target="__blank">
-  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/nuxt-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
-</a>
-<a href="https://nuxt.com" target="__blank">
-  <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js">
+  <img alt="MIT LICENSE" src="https://img.shields.io/npm/l/@unvuetify/nuxt-i18n-utils.svg?style=flat&colorA=18181B&colorB=1867C0">
 </a>
 </p>
 
@@ -32,28 +29,29 @@ Nuxt 3 utilities for Vuetify.
 
 ```bash
 # pnpm
-pnpm add @unvuetify/nuxt-utils
+pnpm add @unvuetify/nuxt-i18n-utils
 
 # npm
-npm i @unvuetify/nuxt-utils
+npm i @unvuetify/nuxt-i18n-utils
 
 # yarn
-yarn add @unvuetify/nuxt-utils
+yarn add @unvuetify/nuxt-i18n-utils
 
 # bun
-bun add @unvuetify/nuxt-utils
+bun add @unvuetify/nuxt-i18n-utils
 ```
 
 ## 🦄 Usage
 
 We suggest you to use [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/), there are a lot of options to configure Vuetify including SSR support and [HTTP Client Hints](https://nuxt.vuetifyjs.com/guide/server-side-rendering.html#server-side-rendering-ssr).
 
-If you just want to auto-import Vuetify components, composables and directives and use sass/scss variables in your Nuxt 3 app, you can use the `configureVuetify` in a new module, create the following module in your Nuxt modules folder:
+If you just want to use Vuetify with `@nuxtjs/i18n`, you can use the `configureI18n` function in a new module, create the following module in your Nuxt modules folder:
 
 ```ts
 // modules/vuetify.ts
 import type { VuetifyNuxtOptions } from '@unvuetify/nuxt-utils'
 import { defineNuxtModule } from '@nuxt/kit'
+import { configureI18n } from '@unvuetify/nuxt-i18n-utils'
 import { configureVuetify } from '@unvuetify/nuxt-utils'
 
 export interface ModuleOptions extends VuetifyNuxtOptions {
@@ -70,6 +68,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(options, nuxt) {
     configureVuetify(nuxt, options)
+    configureI18n(nuxt)
   },
 })
 ```
@@ -80,6 +79,10 @@ then, run the `nuxt/nuxi prepare` command and add the options to your `nuxt.conf
 // nuxt.config.ts
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    /* i18n options */
+  },
   /* other nuxt options */
   vuetify: {
     composables: { /* composables options */ },
@@ -90,35 +93,54 @@ export default defineNuxtConfig({
 })
 ```
 
-add `vuetify/styles` to the `css` option in your `nuxt.config.ts` file:
-
-```ts
-// nuxt.config.ts
-css: [
-  '@mdi/font/css/materialdesignicons.css', // if you're using mdi icon fonts
-  'vuetify/styles'
-]
-```
-
 and finally, you also need to add a Nuxt plugin to register the Vuetify plugin:
 
 ```ts
 // plugins/vuetify.ts
+import type { VuetifyOptions } from 'vuetify'
+import { configureVuetifyI18nAdapter } from '@unvuetify/nuxt-i18n-utils/runtime'
 import { createVuetify } from 'vuetify'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const vuetify = createVuetify({
+  const options = {
     theme: {
       defaultTheme: 'dark',
     },
-  })
+  } satisfies VuetifyOptions
+  configureVuetifyI18nAdapter(options)
+  const vuetify = createVuetify(options)
   nuxtApp.vueApp.use(vuetify)
 })
 ```
 
-Check the `nuxt` playgrounds:
-- [basic-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/basic-nuxt)
-- [prefix-nuxt](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/prefix-nuxt)
+Check the `nuxt-i18n` playground:
+- [nuxt-i18n](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/nuxt-i18n)
+
+## Nuxt I18n v8 support
+
+If you want to use `@nuxtjs/i18n` version 8, you need to pin Nuxt and Vuetify versions, otherwise you will get `unhead` version 2 errors:
+- Nuxt 3.15.4 or any previous version: Nuxt 3.16.0 updated to use `unhead` version 2
+- Vuetify 3.7.16 or any previous version: Vuetify 3.7.17 updated to use `unhead` version 2
+
+```json
+{
+  "dependencies": {
+    "@nuxtjs/i18n": "^8",
+    "nuxt": "3.15.4",
+    "vuetify": "3.7.16"
+  }
+}
+```
+
+If you want to prefix Vuetify directives, you will need to override `unimport` to use `^5.0.1` version via `resolutions` or `pnpm.overrides` in your `package.json` file (via `@unvuetify/unimport-presets`):
+
+```json
+{
+  "resolutions": {
+    "unimport": "^5.0.1"
+  }
+}
+```
 
 ## 📄 License
 

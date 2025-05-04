@@ -32,6 +32,7 @@
     "@antfu/ni": "catalog:",
     "@arethetypeswrong/cli": "catalog:",
     "@nuxt/module-builder": "catalog:",
+    "@nuxtjs/i18n": "catalog:",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",

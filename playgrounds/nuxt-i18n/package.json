@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-i18n",
+  "type": "module",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:typecheck": "TYPECHECK=true nuxt prepare && TYPECHECK=true nuxt typecheck"
+  },
+  "dependencies": {
+    "@mdi/font": "catalog:",
+    "nuxt": "catalog:",
+    "vue": "catalog:",
+    "vuetify": "catalog:"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "catalog:",
+    "@unvuetify/nuxt-i18n-utils": "workspace:*",
+    "@unvuetify/nuxt-utils": "workspace:*",
+    "sass-embedded": "catalog:",
+    "typescript": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

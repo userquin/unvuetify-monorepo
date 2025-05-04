@@ -17,7 +17,8 @@ const pnpmCatalogs = {
   '@mdi/font': '7.4.47',
   '@nuxt/fonts': '^0.11.1',
   '@nuxt/module-builder': '^1.0.1',
-  '@nuxt/schema': '^3.16.2',
+  '@nuxt/schema': '^3.17.1',
+  '@nuxtjs/i18n': '^9.5.4',
   '@tsconfig/node22': '^22.0.0',
   '@types/node': '^22.14.1',
   '@vitejs/plugin-vue': '^5.2.3',
@@ -32,7 +33,7 @@ const pnpmCatalogs = {
   'tsx': '^4.19.3',
   'typescript': '~5.8.3',
   'unbuild': '^3.5.0',
-  'unimport': '^5.0.0',
+  'unimport': '^5.0.1',
   'unplugin-auto-import': '^19.1.2',
   'unplugin-fonts': '^1.3.1',
   'unplugin-vue-components': '^28.4.1',
@@ -90,9 +91,6 @@ async function updateProjectStructure() {
   const root = resolve('./package.json')
   const packageJson = JSON.parse(await fsPromises.readFile(root, { encoding: 'utf-8' }))
   packageJson.pnpm = {
-    patchedDependencies: {
-      'unimport@5.0.0': 'patches/unimport@5.0.0.patch',
-    },
     overrides: {
       'sass-embedded': 'npm:sass@1.86.3',
     },
@@ -114,6 +112,7 @@ async function updateProjectStructure() {
   await Promise.all([
     // replace pnpm catalog: dependencies
     replaceDependencies(resolve('./package.json')),
+    replaceDependencies(resolve('./packages/nuxt-i18n-utils/package.json')),
     replaceDependencies(resolve('./packages/nuxt-utils/package.json')),
     replaceDependencies(resolve('./packages/shared/package.json')),
     replaceDependencies(resolve('./packages/styles-plugin/package.json')),
@@ -122,6 +121,7 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/basic-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/basic-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/basic-unimport/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),

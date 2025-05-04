@@ -85,9 +85,6 @@ async function updateProjectStructure() {
   const root = resolve('./package.json')
   const packageJson = JSON.parse(await fsPromises.readFile(root, { encoding: 'utf-8' }))
   packageJson.pnpm = {
-    patchedDependencies: {
-      'unimport@5.0.0': 'patches/unimport@5.0.0.patch',
-    },
     overrides: {
       'sass-embedded': 'npm:sass@1.86.3',
     },
@@ -109,6 +106,7 @@ async function updateProjectStructure() {
   await Promise.all([
     // replace pnpm catalog: dependencies
     replaceDependencies(resolve('./package.json')),
+    replaceDependencies(resolve('./packages/nuxt-i18n-utils/package.json')),
     replaceDependencies(resolve('./packages/nuxt-utils/package.json')),
     replaceDependencies(resolve('./packages/shared/package.json')),
     replaceDependencies(resolve('./packages/styles-plugin/package.json')),
@@ -117,6 +115,7 @@ async function updateProjectStructure() {
     replaceDependencies(resolve('./playgrounds/basic-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/basic-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/basic-unimport/package.json')),
+    replaceDependencies(resolve('./playgrounds/nuxt-i18n/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-nuxt/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-resolvers/package.json')),
     replaceDependencies(resolve('./playgrounds/prefix-unimport/package.json')),

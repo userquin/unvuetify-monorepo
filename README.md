@@ -36,7 +36,8 @@ This monorepo has been created due to the existing limitations when using `vite-
 - 💥 **Vue Lazy Hydration support**: ready to use [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) with Vuetify components and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support)
 - 🔌 **Extensible**: allow prefixing Vuetify components, directives and composables with `Vuetify` prefix
 - ✨ **VSCode directives** suggestions
-- ⚙️ **Nuxt 3/4 utilities**: drop a simple Nuxt module and it will auto-import all Vuetify components, directives and composables for you
+- ⚙️ **Nuxt utilities**: drop a simple Nuxt module and it will auto-import all Vuetify components, directives and composables for you
+- 🌍 **Nuxt I18n utilities**: install [@nuxtjs/i18n](https://github.com/nuxt-modules/i18n) Nuxt module, drop a simple module to configure Vuetify with i18n support
 - 🦾 **Type Strong**: written in [TypeScript](https://www.typescriptlang.org/)
 
 ## 🛠️ Packages
@@ -46,6 +47,7 @@ This monorepo has been created due to the existing limitations when using `vite-
 - [@unvuetify/unplugin-vue-components-resolvers](./packages/unplugin-vue-components-resolvers): resolvers to auto-import Vuetify components and directives
 - [@unvuetify/vite-styles-plugin](./packages/styles-plugin): Vite plugin to load Vuetify sass/scss styles with Nuxt 3 SSR support
 - [@unvuetify/nuxt-utils](./packages/nuxt-utils): utilities to configure Vuetify composables, directives, components and sass/scss styles in your Nuxt 3 application
+- [@unvuetify/nuxt-i18n-utils](./packages/nuxt-i18n-utils): utilities to configure Vuetify with [@nuxtjs/i18n](https://github.com/nuxt-modules/i18n) in your Nuxt application
 
 ## 🦄 Usage
 
@@ -58,6 +60,9 @@ There are a lot of packages/modules in this repository, our suggestion is to use
   - [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) for all Vuetify features
 - Nuxt basic (check [nuxt-utils usage](./packages/nuxt-utils/README.md#-usage)):
   - `@unvuetify/nuxt-utils` via Nuxt module using `configureVuetify` function
+- Nuxt basic i18n (check [nuxt-utils usage](./packages/nuxt-utils/README.md#-usage) and [nuxt-i18n-utils usage](./packages/nuxt-i18n-utils/README.md#-usage)):
+  - `@unvuetify/nuxt-utils` via Nuxt module using `configureVuetify` function
+  - `@unvuetify/nuxt-i18n-utils` via Nuxt module using `configureI18n` function
 
 Check the playgrounds for further details:
 - [basic-nuxt](./playgrounds/basic-nuxt)
@@ -66,6 +71,7 @@ Check the playgrounds for further details:
 - [prefix-nuxt](./playgrounds/prefix-nuxt)
 - [prefix-resolvers](./playgrounds/prefix-resolvers)
 - [prefix-unimport](./playgrounds/prefix-unimport)
+- [nuxt-i18n](./playgrounds/nuxt-i18n)
 
 > [!WARNING]
 > `@nuxt/fonts` disabled and `settings.scss` files updated to run Nuxt playgrounds when running at StackBlitz.
@@ -75,10 +81,10 @@ Check the playgrounds for further details:
 ## 👀 Package features comparison
 
 > [!NOTE]
-> `unimport` requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/unimport%404.2.0.patch) to support prefixing Vuetify directives in Nuxt, should be fixed in next `v4/v5` releases: check https://github.com/unjs/unimport/pull/447.
+> `unimport` requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/unimport%404.2.0.patch) to support prefixing Vuetify directives in Nuxt, fixed in `unimport v5.0.1` release: check https://github.com/unjs/unimport/pull/447.
 
 > [!NOTE]
-> Nuxt 3.16.2 requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/nuxt%403.16.2.patch) to support Vue Lazy Hydration, should be fixed in 3.17.0: check https://github.com/nuxt/nuxt/pull/31649.
+> Nuxt 3.16.2 requires a [patch](https://github.com/userquin/unvuetify-monorepo/blob/main/patches/nuxt%403.16.2.patch) to support Vue Lazy Hydration, fixed in Nuxt 3.17.0: check https://github.com/nuxt/nuxt/pull/31649.
 
 Feature / Package | vite-plugin-vuetify | webpack-plugin-vuetify | styles[^1] | resolvers[^2] | presets[^3] | Nuxt[^4] |
 ----------------|---------------------|------------------------|-----------------------|---------------|-------------|----------
