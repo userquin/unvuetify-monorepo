@@ -20,8 +20,6 @@ export default defineNuxtConfig({
     'vuetify/styles',
   ],
 
-  modules: ['@nuxt/fonts'],
-
   vuetify: {
     styles: {
       mode: {

@@ -144,7 +144,6 @@ async function updateProjectStructure() {
   await Promise.all([
     prepareStackBlitzExampleScript(rootDir, 'basic-nuxt', dependencies, {
       nuxt: true,
-      disableNuxtFonts: true,
       overrideNuxtSettings: true,
     }),
     prepareStackBlitzExampleScript(rootDir, 'basic-resolvers', dependencies),
@@ -154,7 +153,6 @@ async function updateProjectStructure() {
     }),
     prepareStackBlitzExampleScript(rootDir, 'prefix-nuxt', dependencies, {
       nuxt: true,
-      disableNuxtFonts: true,
       overrideNuxtSettings: true,
     }),
     prepareStackBlitzExampleScript(rootDir, 'prefix-resolvers', dependencies),

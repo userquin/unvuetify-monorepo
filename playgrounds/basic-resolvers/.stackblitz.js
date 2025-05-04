@@ -101,6 +101,7 @@ async function updateProjectStructure() {
   }
   if (nuxt) {
     packageJson.scripts['test:typecheck'] = 'pnpm typecheck'
+    delete packageJson.devDependencies['@nuxt/fonts']
     const overrideNuxt = await fsPromises.lstat('./.sb-nuxt.config.ts').then(stat => stat.isFile()).catch(() => false)
     if (overrideNuxt) {
       await fsPromises.rm('./nuxt.config.ts', { force: true })

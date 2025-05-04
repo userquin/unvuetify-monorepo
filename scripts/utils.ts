@@ -1,18 +1,5 @@
 import type { Customizations } from './types'
 
-const disableNuxtFontsEntry = `
-async function disableNuxtFonts() {
-  const path = './nuxt.config.ts'
-  let content = await fsPromises.readFile(path, { encoding: 'utf-8' })
-  content = content.replace(
-    '  modules: [\\'@nuxt/fonts\\'],',
-    \`  // disabled at SB: check https://github.com/nuxt/fonts/issues/438#issuecomment-2560376071
-  // modules: ['@nuxt/fonts'],\`,
-  )
-
-  await fsPromises.writeFile(path, content, 'utf-8')
-}`
-
 const overrideNuxtSettingsEntry = `
 async function overrideNuxtSettings() {
   const path = './app/assets/settings.scss'
@@ -25,15 +12,7 @@ async function overrideNuxtSettings() {
   await fsPromises.writeFile(path, template, 'utf-8')
 }`
 
-function prepareNuxtLogic(disableFonts: boolean, overrideSettings: boolean) {
-  if (disableFonts && overrideSettings) {
-    return `\n  await Promise.all([disableNuxtFonts(), overrideNuxtSettings()])`
-  }
-
-  if (disableFonts) {
-    return `\n  await disableNuxtFonts()`
-  }
-
+function prepareNuxtLogic(overrideSettings: boolean) {
   if (overrideSettings) {
     return `\n  await overrideNuxtSettings()`
   }
@@ -67,7 +46,7 @@ const extraDependencies = ${JSON.stringify(dependencies)}
 /** @type {Record<string, string>} */
 const extraDevDependencies = ${JSON.stringify(devDependencies)}
 /** @type {Record<string, string>} */
-const pnpmCatalogs = ${dependenciesRecord}${customizations?.disableNuxtFonts ? disableNuxtFontsEntry : ''}${customizations?.overrideNuxtSettings ? overrideNuxtSettingsEntry : ''}
+const pnpmCatalogs = ${dependenciesRecord}${customizations?.overrideNuxtSettings ? overrideNuxtSettingsEntry : ''}
 
 /** @param packageJson {any} */
 function replaceDependencies(packageJson) {
@@ -120,6 +99,7 @@ async function updateProjectStructure() {
   }
   if (nuxt) {
     packageJson.scripts['test:typecheck'] = 'pnpm typecheck'
+    delete packageJson.devDependencies['@nuxt/fonts']
     const overrideNuxt = await fsPromises.lstat('./.sb-nuxt.config.ts').then(stat => stat.isFile()).catch(() => false)
     if (overrideNuxt) {
       await fsPromises.rm('./nuxt.config.ts', { force: true })
@@ -139,7 +119,7 @@ async function updateProjectStructure() {
       }
     }\`,
     'utf-8',
-  )${prepareNuxtLogic(customizations?.disableNuxtFonts === true, customizations?.overrideNuxtSettings === true)}
+  )${prepareNuxtLogic(customizations?.overrideNuxtSettings === true)}
 }
 `
 }

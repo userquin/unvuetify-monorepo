@@ -4,7 +4,6 @@ export interface PnpmWorkspaceYaml {
 }
 
 export interface Customizations {
-  disableNuxtFonts?: true
   overrideNuxtSettings?: true
   nuxt?: true
   packageJson?: {
