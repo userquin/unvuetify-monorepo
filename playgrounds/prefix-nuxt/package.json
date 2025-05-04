@@ -28,6 +28,6 @@
   },
   "stackblitz": {
     "installDependencies": false,
-    "startCommand": "node .stackblitz.js && npm install && npm run dev"
+    "startCommand": "node .stackblitz.js && pnpm install && pnpm dev"
   }
 }
