@@ -90,6 +90,16 @@ export default defineNuxtConfig({
 })
 ```
 
+add `vuetify/styles` to the `css` option in your `nuxt.config.ts` file:
+
+```ts
+// nuxt.config.ts
+css: [
+  '@mdi/font/css/materialdesignicons.css', // if you're using mdi icon fonts
+  'vuetify/styles'
+]
+```
+
 and finally, you also need to add a Nuxt plugin to register the Vuetify plugin:
 
 ```ts
