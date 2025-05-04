@@ -25,8 +25,8 @@ catalogs:
       specifier: ^1.0.1
       version: 1.0.1
     '@nuxt/schema':
-      specifier: ^3.16.2
-      version: 3.16.2
+      specifier: ^3.17.1
+      version: 3.17.1
     '@nuxtjs/i18n':
       specifier: ^9.5.4
       version: 9.5.4
@@ -190,7 +190,7 @@ importers:
     devDependencies:
       '@nuxt/schema':
         specifier: 'catalog:'
-        version: 3.16.2
+        version: 3.17.1
 
   packages/shared:
     dependencies:
@@ -1433,10 +1433,6 @@ packages:
     peerDependencies:
       '@nuxt/cli': ^3.24.1
       typescript: ^5.8.3
-
-  '@nuxt/schema@3.16.2':
-    resolution: {integrity: sha512-2HZPM372kuI/uw9VU/hOoYuzv803oZAtyoEKC5dQCQTKAQ293AjypF3WljMXUSReFS/hcbBSgGzYUPHr3Qo+pg==}
-    engines: {node: ^14.18.0 || >=16.10.0}
 
   '@nuxt/schema@3.17.1':
     resolution: {integrity: sha512-FmPMyfexkZ0bp7rDz+012/ee9rEHPAZ3P8alOZrCV9j/xPcjuKspcLWGZz4kAoJA7nnx49kpRUcS2rpYcBRV+A==}
@@ -7263,13 +7259,6 @@ snapshots:
       - sass
       - vue
       - vue-tsc
-
-  '@nuxt/schema@3.16.2':
-    dependencies:
-      consola: 3.4.2
-      defu: 6.1.4
-      pathe: 2.0.3
-      std-env: 3.9.0
 
   '@nuxt/schema@3.17.1':
     dependencies:
