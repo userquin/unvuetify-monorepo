@@ -81,6 +81,9 @@ function replaceDependencies(packageJson) {
         else if (value === 'workspace:*') {
           acc[key] = 'latest'
         }
+        else {
+          acc[key] = value
+        }
         return acc
       }, {})
     }
