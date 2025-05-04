@@ -71,7 +71,7 @@ There are a lot of packages/modules in this repository, our suggestion is to use
 
 You can open `@unvuetify` monorepo in StackBlitz:
 
-![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
 
 or just play with individual playgrounds:
 
