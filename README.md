@@ -36,7 +36,8 @@ This monorepo has been created due to the existing limitations when using `vite-
 - 💥 **Vue Lazy Hydration support**: ready to use [Vue Lazy Hydration](https://blog.vuejs.org/posts/vue-3-5#lazy-hydration) with Vuetify components and [Nuxt 3](https://nuxt.com/blog/v3-16#%EF%B8%8F-delayed-hydration-support)
 - 🔌 **Extensible**: allow prefixing Vuetify components, directives and composables with `Vuetify` prefix
 - ✨ **VSCode directives** suggestions
-- ⚙️ **Nuxt 3/4 utilities**: drop a simple Nuxt module and it will auto-import all Vuetify components, directives and composables for you
+- ⚙️ **Nuxt utilities**: drop a simple Nuxt module and it will auto-import all Vuetify components, directives and composables for you
+- 🌍 **Nuxt I18n utilities**: install [@nuxtjs/i18n](https://github.com/nuxt-modules/i18n) Nuxt module, drop a simple module to configure Vuetify with i18n support
 - 🦾 **Type Strong**: written in [TypeScript](https://www.typescriptlang.org/)
 
 ## 🛠️ Packages
