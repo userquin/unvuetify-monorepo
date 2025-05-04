@@ -69,7 +69,7 @@ There are a lot of packages/modules in this repository, our suggestion is to use
 > [!WARNING]
 > `@nuxt/fonts` disabled and `settings.scss` files updated to run Nuxt playgrounds when running at StackBlitz.
 
-You can open `@unvuetify` monorepo in 
+You can open `@unvuetify` monorepo in StackBlitz:
 
 ![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/userquin/unvuetify-monorepo)
 
