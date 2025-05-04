@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import LocaleButton from '~/components/LocaleButton.vue'
+
 const { locales, t, locale } = useI18n()
 const { current } = useVLocale()
 const { isRtl } = useVRtl()
@@ -55,6 +57,8 @@ watch([locale, name], ([, nn]) => {
       <v-col cols="12">
         <v-locale-provider locale="es">
           <v-btn>{{ t('$vuetify.badge') }}</v-btn>
+          <br>
+          <LocaleButton />
         </v-locale-provider>
       </v-col>
       <v-col cols="12">
