@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/nuxt-i18n-utils",
   "type": "module",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Nuxt I18n utilities for Vuetify",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",

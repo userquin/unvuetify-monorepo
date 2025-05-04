@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/vite-styles-plugin",
   "type": "module",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Vuetify Vite plugin for styles",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",
