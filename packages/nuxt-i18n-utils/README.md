@@ -10,7 +10,7 @@
 <h1 align="center">@unvuetify/nuxt-i18n-utils</h1>
 
 <p align="center">
-Nuxt 3 I18n utilities.
+Nuxt I18n utilities.
 </p>
 
 <p align='center'>
@@ -115,6 +115,32 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 Check the `nuxt-i18n` playground:
 - [nuxt-i18n](https://github.com/userquin/unvuetify-monorepo/tree/main/playgrounds/nuxt-i18n)
+
+## Nuxt I18n v8 support
+
+If you want to use `@nuxtjs/i18n` version 8, you need to pin Nuxt and Vuetify versions, otherwise you will get `unhead` version 2 errors:
+- Nuxt 3.15.4 or any previous version: Nuxt 3.16.0 updated to use `unhead` version 2
+- Vuetify 3.7.16 or any previous version: Vuetify 3.7.17 updated to use `unhead` version 2
+
+```json
+{
+  "dependencies": {
+    "@nuxtjs/i18n": "^8",
+    "nuxt": "3.15.4",
+    "vuetify": "3.7.16"
+  }
+}
+```
+
+If you want to prefix Vuetify directives, you will need to override `unimport` to use `^5.0.1` version via `resolutions` or `pnpm.overrides` in your `package.json` file (via `@unvuetify/unimport-presets`):
+
+```json
+{
+  "resolutions": {
+    "unimport": "^5.0.1"
+  }
+}
+```
 
 ## 📄 License
 
