@@ -98,7 +98,7 @@ or just play with individual playgrounds:
 
 Feature / Package | vite-plugin-vuetify | webpack-plugin-vuetify | styles[^1] | resolvers[^2] | presets[^3] | Nuxt[^4] |
 ----------------|---------------------|------------------------|-----------------------|---------------|-------------|----------
-auto-import composables | ❌                   | ❌                      | ❌                     | ✅             | ✅           | ✅
+auto-import composables | ❌                   | ❌                      | ❌                     | ❌             | ✅           | ✅
 auto-import components | ✅                   | ✅                      | ❌                     | ✅             | ✅[^5]       | ✅
 auto-import directives | ✅                   | ✅                      | ❌                     | ✅             | ✅           | ✅
 auto-import labs components | ✅                   | ✅                      | ❌                     | ✅             | ✅           | ✅
