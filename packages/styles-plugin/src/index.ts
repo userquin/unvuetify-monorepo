@@ -38,7 +38,7 @@ export interface VuetifyStylesOptions {
    *
    * If set to `true`, the plugin will use the Vite convention to prefix the Vuetify virtual styles.
    *
-   * Enable this flag if you're using Vuetify with Vite and SSR:
+   * Enable this flag if you're using Vuetify with Vite and SSR without Nuxt:
    * - [vite-ssg](https://github.com/antfu-collective/vite-ssg)
    * - [Vitesse template](https://github.com/antfu-collective/vitesse)
    * - [îles](https://github.com/ElMassimo/iles)
