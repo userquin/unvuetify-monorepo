@@ -42,7 +42,7 @@ export interface VuetifyStylesOptions {
    * - [vite-ssg](https://github.com/antfu-collective/vite-ssg)
    * - [Vitesse template](https://github.com/antfu-collective/vitesse)
    * - [îles](https://github.com/ElMassimo/iles)
-   * - or any other framework that uses Vite for SSR
+   * - or any other framework/plugin that uses Vite and SSR
    */
   viteSSR?: true
 }
@@ -54,8 +54,8 @@ export function VuetifyStylesVitePlugin(options: VuetifyStylesOptions = {}) {
   let isNone = false
   let cssVariables = false
   let fileImport = false
-  const PREFIX = `${options.viteSSR ? 'virtual' : ''}vuetify-styles/`
-  const SSR_PREFIX = `${options.viteSSR ? '\0' : '/@'}${PREFIX}`
+  const PREFIX = `${options.viteSSR ? 'virtual:' : ''}vuetify-styles/`
+  const SSR_PREFIX = options.viteSSR ? `\0${PREFIX}` : `/@${PREFIX}`
   const resolveCss = resolveCssFactory()
   const api = options.registerApi ?? 'modern-compiler'
 
