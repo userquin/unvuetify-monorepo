@@ -37,8 +37,10 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
     directives,
     composables,
     components,
-    styles,
+    styles = {},
   } = options
+
+  const { viteSSR: _, ...stylesOptions } = styles
 
   const imports = nuxt.options.imports
   imports.addons = enableDirectives(imports.addons as AddonsOptions | Addon[] | undefined)
@@ -95,7 +97,7 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
     viteInlineConfig.vue.template.transformAssetUrls = transformAssetUrls
 
     viteInlineConfig.plugins = viteInlineConfig.plugins || []
-    viteInlineConfig.plugins.push(VuetifyStylesVitePlugin(styles))
+    viteInlineConfig.plugins.push(VuetifyStylesVitePlugin(stylesOptions))
   })
 }
 

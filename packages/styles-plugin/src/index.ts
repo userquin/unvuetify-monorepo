@@ -33,6 +33,18 @@ export interface VuetifyStylesOptions {
   mode?: true | 'none' | 'source' | {
     configFile: string
   }
+  /**
+   * Whether to use Vite SSR mode.
+   *
+   * If set to `true`, the plugin will use the Vite convention to prefix the Vuetify virtual styles.
+   *
+   * Enable this flag if you're using Vuetify with Vite and SSR:
+   * - [vite-ssg](https://github.com/antfu-collective/vite-ssg)
+   * - [Vitesse template](https://github.com/antfu-collective/vitesse)
+   * - [îles](https://github.com/ElMassimo/iles)
+   * - or any other framework that uses Vite for SSR
+   */
+  viteSSR?: true
 }
 
 export function VuetifyStylesVitePlugin(options: VuetifyStylesOptions = {}) {
@@ -42,8 +54,8 @@ export function VuetifyStylesVitePlugin(options: VuetifyStylesOptions = {}) {
   let isNone = false
   let cssVariables = false
   let fileImport = false
-  const PREFIX = 'vuetify-styles/'
-  const SSR_PREFIX = `/@${PREFIX}`
+  const PREFIX = `${options.viteSSR ? 'virtual' : ''}vuetify-styles/`
+  const SSR_PREFIX = `${options.viteSSR ? '\0' : '/@'}${PREFIX}`
   const resolveCss = resolveCssFactory()
   const api = options.registerApi ?? 'modern-compiler'
 
