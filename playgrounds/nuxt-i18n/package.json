@@ -1,7 +1,7 @@
 {
   "name": "nuxt-i18n",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Nuxt + I18n playground",
   "scripts": {

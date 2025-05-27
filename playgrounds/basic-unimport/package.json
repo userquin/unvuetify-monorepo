@@ -1,7 +1,7 @@
 {
   "name": "basic-unimport",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Vite playground auto-importing Vuetify components, directives and composables.",
   "scripts": {
