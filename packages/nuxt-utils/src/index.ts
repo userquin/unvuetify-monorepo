@@ -29,7 +29,7 @@ export interface VuetifyNuxtOptions {
   directives?: VuetifyDirectivesOptions
   components?: VuetifyComponentsOptions
   composables?: VuetifyComposablesOptions
-  styles?: VuetifyStylesOptions
+  styles?: Omit<VuetifyStylesOptions, 'viteSSR'>
 }
 
 export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
