@@ -134,11 +134,16 @@ function createProvideFunction(data: {
     const t = wrapI18n(i18n.t)
     const n = wrapI18n(i18n.n)
 
+    function inferDecimalSeparator() {
+      return i18n.n(0.1).includes(',') ? ',' : '.'
+    }
+
     return <LocaleInstance>{
       name: '@unvuetify:nuxt-i18n-utils:adapter',
       current: currentLocale,
       fallback: data.fallback,
       messages: data.messages,
+      decimalSeparator: toRef(() => props.decimalSeparator ?? inferDecimalSeparator()),
       t,
       n,
       provide: createProvideFunction({ current: currentLocale, fallback: data.fallback, messages: data.messages }),
