@@ -12,7 +12,7 @@ export interface VuetifyStylesOptions {
   /**
    * What CSS SASS/SCSS API should the plugin register?
    * - `false` - don't register any SASS/SCSS API
-   * - `legacy` - use legacy SASS/SCSS API (will be removed in Vite 7)
+   * - `legacy` - use legacy SASS/SCSS API
    * - `modern` - register SASS/SCSS 'modern' API => when using `sass`
    * - `modern-compiler` - register SASS/SCSS 'modern-compiler' API => when using `sass-embedded`
    *
@@ -22,6 +22,8 @@ export interface VuetifyStylesOptions {
    *
    * @see https://vite.dev/config/shared-options.html#css-preprocessoroptions
    * @see https://vite.dev/guide/migration.html#sass-now-uses-modern-api-by-default
+   *
+   * @deprecated api mode is removed in Vite 7
    */
   registerApi?: 'modern' | 'modern-compiler' | 'legacy' | false
   /**
@@ -57,11 +59,12 @@ export function VuetifyStylesVitePlugin(options: VuetifyStylesOptions = {}) {
   const PREFIX = `${options.viteSSR ? 'virtual:' : ''}vuetify-styles/`
   const SSR_PREFIX = options.viteSSR ? `\0${PREFIX}` : `/@${PREFIX}`
   const resolveCss = resolveCssFactory()
-  const api = options.registerApi ?? 'modern-compiler'
 
   const [major, minor, patch] = VITE_VERSION.split('.')
     .map((v: string) => v.includes('-') ? v.split('-')[0] : v)
     .map(v => Number.parseInt(v))
+
+  const api = (major >= 7 ? false : options.registerApi ?? 'modern-compiler')
 
   return <PluginOption>{
     name: '@unvuetify:vite-styles-plugin',
