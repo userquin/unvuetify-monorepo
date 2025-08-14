@@ -37,7 +37,7 @@
     "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
   },
   "peerDependencies": {
-    "unplugin-vue-components": "catalog:"
+    "unplugin-vue-components": "^28.0.0 || ^29.0.0"
   },
   "dependencies": {
     "@unvuetify/shared": "workspace:*"
