@@ -79,8 +79,8 @@ function createComponentsResolver(
       const [components, labsComponents] = await Promise.all(promises)
       const component = vuetifyName in components.components
         ? components.components[vuetifyName]
-        : labs && vuetifyName in labsComponents
-          ? labsComponents[vuetifyName]
+        : labs && vuetifyName in labsComponents.components
+          ? labsComponents.components[vuetifyName]
           : undefined
 
       if (!component)

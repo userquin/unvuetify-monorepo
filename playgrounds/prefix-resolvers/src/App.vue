@@ -60,6 +60,9 @@ function onClick() {
               </vuetify-col>
             </vuetify-row>
           </vuetify-col>
+          <vuetify-col cols="12">
+            <vuetify-stepper-vertical :items="['Step 1', 'Step 2', 'Step 3']" />
+          </vuetify-col>
         </vuetify-row>
       </vuetify-container>
     </vuetify-main>

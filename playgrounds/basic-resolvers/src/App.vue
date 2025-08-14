@@ -58,6 +58,9 @@ function onClick() {
                   </template>
                 </v-card>
               </v-col>
+              <v-col cols="12">
+                <v-stepper-vertical :items="['Step 1', 'Step 2', 'Step 3']" />
+              </v-col>
             </v-row>
           </v-col>
         </v-row>

@@ -18,7 +18,7 @@ export interface ImportComponents {
   directives: DirectiveName[]
 }
 export interface ImportLabsComponents {
-  [key: string]: VuetifyComponent
+  components: VuetifyComponents
 }
 export type ImportMaps = [importMaps: Promise<ImportComponents>, importMapsLabs: Promise<ImportLabsComponents>]
 
