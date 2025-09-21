@@ -2,7 +2,7 @@ import type { Ref } from '#imports'
 import type { LocaleObject } from '@nuxtjs/i18n'
 import type { Locale } from 'vue-i18n'
 import type { DateOptions, LocaleInstance, LocaleMessages, LocaleOptions, VuetifyOptions } from 'vuetify'
-import { ref, useI18n, useNuxtApp, watch } from '#imports'
+import { ref, toRef, useI18n, useNuxtApp, watch } from '#imports'
 
 export interface VuetifyI18nAdapterOptions {
   /**
@@ -101,10 +101,15 @@ export function configureVuetifyI18nAdapter(
     current: currentLocale,
     fallback,
     messages,
+    decimalSeparator: toRef(() => vuetifyOptions.locale?.decimalSeparator ?? inferDecimalSeparator(i18n.n)),
     t: (key, ...params) => i18n.t(key, params),
     n: i18n.n,
     provide: createProvideFunction({ current: currentLocale, fallback, messages }),
   }
+}
+
+function inferDecimalSeparator(format: (v: number) => string) {
+  return format(0.1).includes(',') ? ',' : '.'
 }
 
 // todo: add formatNumber, formatCurrency, formatDateTime, formatDate, formatTime...
@@ -134,16 +139,12 @@ function createProvideFunction(data: {
     const t = wrapI18n(i18n.t)
     const n = wrapI18n(i18n.n)
 
-    function inferDecimalSeparator() {
-      return i18n.n(0.1).includes(',') ? ',' : '.'
-    }
-
     return <LocaleInstance>{
       name: '@unvuetify:nuxt-i18n-utils:adapter',
       current: currentLocale,
       fallback: data.fallback,
       messages: data.messages,
-      decimalSeparator: toRef(() => props.decimalSeparator ?? inferDecimalSeparator()),
+      decimalSeparator: toRef(() => props.decimalSeparator ?? inferDecimalSeparator(i18n.n)),
       t,
       n,
       provide: createProvideFunction({ current: currentLocale, fallback: data.fallback, messages: data.messages }),
