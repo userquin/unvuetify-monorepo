@@ -15,6 +15,7 @@ import {
   resolveVuetifyComponentFrom,
   resolveVuetifyImportMaps,
   toKebabCase,
+  VuetifyVersion,
 } from '@unvuetify/shared'
 
 export type * from './types'
@@ -32,9 +33,12 @@ export function VuetifyComposables(options: VuetifyComposablesOptions = {}) {
     ['use-locale', 'useLocale'],
     ['use-rtl', 'useRtl'],
     ['use-theme', 'useTheme'],
-    ['use-mask', 'useMask'],
     ['use-hotkey', 'useHotkey'],
   ]
+  const [major, minor] = VuetifyVersion.split('.').map(v => Number.parseInt(v, 10))
+  if (!Number.isNaN(major) && !Number.isNaN(minor) && (major > 3 || (major === 3 && minor >= 10))) {
+    composableImports.push(['use-mask', 'useMask'])
+  }
   const imports = typeof prefix === 'string'
     ? composableImports.map(([l, n]) => [l, n, n.replace('use', `use${prefix}`)])
     : prefix
