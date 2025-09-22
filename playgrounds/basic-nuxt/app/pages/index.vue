@@ -3,6 +3,14 @@ import type { SubmitEventPromise } from 'vuetify'
 
 const theme = useTheme()
 useRules(() => ['required', 'pinCode'])
+useHotkey(
+  'shift+t',
+  (e) => {
+    // eslint-disable-next-line no-console
+    console.log(e)
+  },
+  { event: 'keydown' },
+)
 
 const clicks = ref(0)
 function onClick() {
