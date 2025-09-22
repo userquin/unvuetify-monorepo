@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import type { SubmitEventPromise } from 'vuetify'
+
 const theme = useTheme()
+useRules(() => ['required', 'pinCode'])
 
 const clicks = ref(0)
 function onClick() {
@@ -8,6 +11,12 @@ function onClick() {
 function onHydrated() {
   // eslint-disable-next-line no-console
   console.log('Hydrated')
+}
+
+async function submit(event: SubmitEventPromise) {
+  const { valid, errors } = await event
+  // eslint-disable-next-line no-console
+  console.log('submit:', valid, errors)
 }
 
 // eslint-disable-next-line no-console
@@ -67,6 +76,14 @@ console.log(`Using dark theme? ${theme.global.name.value === 'dark'}`)
                 </lazy-v-btn>
               </template>
             </v-card>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <v-form validate-on="submit" @submit.prevent="submit">
+              <v-text-field :rules="['required', 'pinCode']" label="Pin code" />
+              <v-btn text="Submit" type="submit" />
+            </v-form>
           </v-col>
         </v-row>
       </v-col>
