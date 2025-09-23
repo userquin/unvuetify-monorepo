@@ -15,6 +15,7 @@ import {
   resolveVuetifyComponentFrom,
   resolveVuetifyImportMaps,
   toKebabCase,
+  VuetifyVersion,
 } from '@unvuetify/shared'
 
 export type * from './types'
@@ -32,7 +33,12 @@ export function VuetifyComposables(options: VuetifyComposablesOptions = {}) {
     ['use-locale', 'useLocale'],
     ['use-rtl', 'useRtl'],
     ['use-theme', 'useTheme'],
+    ['use-hotkey', 'useHotkey'],
   ]
+  const [major, minor] = VuetifyVersion.split('.').map(v => Number.parseInt(v, 10))
+  if (!Number.isNaN(major) && !Number.isNaN(minor) && (major > 3 || (major === 3 && minor >= 10))) {
+    composableImports.push(['use-mask', 'useMask'])
+  }
   const imports = typeof prefix === 'string'
     ? composableImports.map(([l, n]) => [l, n, n.replace('use', `use${prefix}`)])
     : prefix
@@ -46,6 +52,27 @@ export function VuetifyComposables(options: VuetifyComposablesOptions = {}) {
       meta: { docsUrl: `https://vuetifyjs.com/en/api/${link}/` },
     })),
   } satisfies InlinePreset
+}
+
+export function VuetifyLabsComposables(options: VuetifyComposablesOptions = {}) {
+  const { prefix } = options
+  const composableImports: [from: string, link: string, name: string][] = [
+    ['vuetify/labs/rules', 'rules', 'useRules'],
+  ]
+  const imports = typeof prefix === 'string'
+    ? composableImports.map(([f, l, n]) => [f, l, n, n.replace('use', `use${prefix}`)])
+    : prefix
+      ? composableImports.map(([f, l, n]) => [f, l, n, n.replace('use', 'useV')])
+      : composableImports
+
+  return imports.map<InlinePreset>(([from, link, name, renamed]) => ({
+    from,
+    imports: [{
+      name: name!,
+      as: renamed,
+      meta: { docsUrl: `https://vuetifyjs.com/en/features/${link}/` },
+    }],
+  }))
 }
 
 export function VuetifyDirectives(options: VuetifyDirectivesOptions = {}) {
