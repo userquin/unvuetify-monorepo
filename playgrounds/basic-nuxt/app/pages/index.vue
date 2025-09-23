@@ -2,7 +2,6 @@
 import type { SubmitEventPromise } from 'vuetify'
 
 const theme = useTheme()
-useRules(() => ['required', 'pinCode'])
 useHotkey(
   'shift+t',
   (e) => {
