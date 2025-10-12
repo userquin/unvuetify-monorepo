@@ -14,7 +14,9 @@ import {
   prepareVuetifyComponents,
   VuetifyComposables,
   VuetifyDirectives,
+  VuetifyLabsComposables,
 } from '@unvuetify/unimport-presets'
+
 import { VuetifyStylesVitePlugin } from '@unvuetify/vite-styles-plugin'
 import defu from 'defu'
 
@@ -29,6 +31,7 @@ export interface VuetifyNuxtOptions {
   directives?: VuetifyDirectivesOptions
   components?: VuetifyComponentsOptions
   composables?: VuetifyComposablesOptions
+  labsComposables?: VuetifyComposablesOptions
   styles?: Omit<VuetifyStylesOptions, 'viteSSR'>
 }
 
@@ -37,6 +40,7 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
     directives,
     composables,
     components,
+    labsComposables,
     styles,
   } = options
 
@@ -47,6 +51,7 @@ export function configureVuetify(nuxt: Nuxt, options: VuetifyNuxtOptions = {}) {
     sources.push(
       VuetifyDirectives(directives),
       VuetifyComposables(composables),
+      ...VuetifyLabsComposables(labsComposables),
     )
   })
 

@@ -3,6 +3,8 @@ import { createRequire } from 'node:module'
 import process from 'node:process'
 import path from 'upath'
 
+export { version as VuetifyVersion } from 'vuetify'
+
 export interface VuetifyComponent {
   from: string
 }
