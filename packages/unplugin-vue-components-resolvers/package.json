@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/unplugin-vue-components-resolvers",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Vuetify unplugin-vue-components resolvers for components and directives",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",

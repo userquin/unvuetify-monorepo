@@ -1,7 +1,7 @@
 {
   "name": "@unvuetify/nuxt-utils",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Nuxt 3 utilities for Vuetify",
   "author": "userquin <userquin@gmail.com>",
   "license": "MIT",

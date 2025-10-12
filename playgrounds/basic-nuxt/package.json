@@ -1,7 +1,7 @@
 {
   "name": "basic-nuxt",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Nuxt playground auto-importing Vuetify components, directives and composables.",
   "scripts": {
