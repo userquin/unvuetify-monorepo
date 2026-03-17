@@ -37,7 +37,7 @@
     "test:attw": "attw --pack --config-path ../../.attw-esm-only.json"
   },
   "peerDependencies": {
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
     "upath": "catalog:"

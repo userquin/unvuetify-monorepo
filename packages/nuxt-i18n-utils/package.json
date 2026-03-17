@@ -51,6 +51,6 @@
   "peerDependencies": {
     "@nuxt/schema": ">=3.9.0",
     "@nuxtjs/i18n": "^8.0.0 || ^9.0.0 || ^10.0.0-0",
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0 || ^4.0.0"
   }
 }
